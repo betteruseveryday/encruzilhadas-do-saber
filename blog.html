@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Encruzilhadas do Saber</title>
+<meta name="description" content="Artigos, reflexões e fundamentos sobre Umbanda, ancestralidade e espiritualidade afro-brasileira. Conhecimento que liberta.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.encruzilhadasdosaber.com/blog">
+<link rel="icon" type="image/png" sizes="512x512" href="logo encruzilhadas main.png">
+<link rel="apple-touch-icon" href="logo encruzilhadas main.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.encruzilhadasdosaber.com/blog">
+<meta property="og:title" content="Blog — Encruzilhadas do Saber">
+<meta property="og:description" content="Artigos, reflexões e fundamentos sobre Umbanda, ancestralidade e espiritualidade afro-brasileira.">
+<meta property="og:image" content="https://www.encruzilhadasdosaber.com/logo encruzilhadas main.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog — Encruzilhadas do Saber">
+<meta name="twitter:description" content="Artigos, reflexões e fundamentos sobre Umbanda, ancestralidade e espiritualidade afro-brasileira.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#080808;--dark:#1E1E1E;--red:#FC3829;
+  --green:#3D6344;--green-light:#4a7a54;
+  --cream:#F7DA9F;--cream-dim:rgba(247,218,159,0.65);--cream-faint:rgba(247,218,159,0.3);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:18px;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.03;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");}
+h1,h2,h3,h4,h5{font-family:'League Spartan',sans-serif;text-transform:uppercase;letter-spacing:.04em;}
+.container{max-width:1200px;margin:0 auto;padding:0 2rem;}
+
+/* ── NAV ── */
+#site-header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:center;padding:0;transition:padding .35s ease-out;pointer-events:none;}
+#site-header.scrolled{padding:.9rem 1.5rem;}
+nav{pointer-events:all;width:100%;max-width:1140px;display:flex;justify-content:space-between;align-items:center;padding:.9rem 2rem;height:66px;border:1px solid transparent;border-radius:0;background:transparent;transition:all .35s ease-out;}
+nav.scrolled{max-width:980px;border-radius:10px;border-color:rgba(61,99,68,.3);background:rgba(8,8,8,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 8px 32px rgba(0,0,0,.5);padding:.5rem 1.4rem;height:54px;}
+.nav-brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;}
+.nav-brand img{width:50px;height:50px;border-radius:50%;border:1px solid rgba(252,56,41,.4);box-shadow:0 0 12px rgba(252,56,41,.25);}
+.nav-brand-text{font-family:'League Spartan',sans-serif;font-size:.78rem;letter-spacing:.14em;color:var(--cream);line-height:1.2;}
+.nav-brand-text em{display:block;color:var(--red);font-style:normal;font-size:.62rem;letter-spacing:.22em;}
+.nav-desktop{display:flex;align-items:center;gap:1rem;}
+.slide-nav{position:relative;list-style:none;display:flex;align-items:center;border-radius:9999px;border:2px solid rgba(247,218,159,.35);background:rgba(8,8,8,.6);backdrop-filter:blur(10px);padding:4px;gap:0;}
+.slide-tab{position:relative;z-index:10;cursor:pointer;}
+.slide-tab a{display:block;padding:.42rem 1.1rem;font-family:'League Spartan',sans-serif;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream);text-decoration:none;white-space:nowrap;transition:color .2s;}
+.slide-tab a:hover{color:var(--red);}
+.slide-tab.active a{color:var(--black);font-weight:700;}
+@media(min-width:768px){.slide-tab a{padding:.6rem 1.05rem;font-size:.72rem;}}
+.slide-cursor{position:absolute;z-index:0;top:4px;left:0;height:calc(100% - 8px);border-radius:9999px;background:var(--cream);pointer-events:none;transition:left .32s cubic-bezier(.34,1.56,.64,1),width .32s cubic-bezier(.34,1.56,.64,1),opacity .22s ease;}
+.nav-cta-btn{font-family:'League Spartan',sans-serif;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream);text-decoration:none;border:1px solid rgba(252,56,41,.5);padding:.5rem 1.3rem;border-radius:9999px;background:rgba(252,56,41,.12);transition:all .3s;white-space:nowrap;}
+.nav-cta-btn:hover{background:var(--red);border-color:var(--red);}
+.menu-toggle{display:none;align-items:center;justify-content:center;width:38px;height:38px;background:transparent;border:1px solid rgba(247,218,159,.3);border-radius:6px;cursor:pointer;color:var(--cream);transition:border-color .3s;}
+.menu-toggle:hover{border-color:var(--red);}
+.menu-icon{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform 300ms ease-in-out;}
+.menu-icon.open{transform:rotate(-45deg);}
+.menu-path-top{stroke-dasharray:12 63;transition:stroke-dasharray 300ms ease-in-out,stroke-dashoffset 300ms ease-in-out;}
+.menu-icon.open .menu-path-top{stroke-dasharray:20 300;stroke-dashoffset:-32.42px;}
+.mobile-panel{pointer-events:all;position:fixed;top:66px;left:0;right:0;bottom:0;z-index:199;background:rgba(8,8,8,.97);border-top:1px solid rgba(61,99,68,.25);display:none;flex-direction:column;overflow:hidden;}
+.mobile-panel.open{display:flex;}
+.mobile-panel-inner{display:flex;flex-direction:column;justify-content:space-between;height:100%;padding:1.5rem;animation:panelIn .25s ease-out;}
+@keyframes panelIn{from{opacity:0;transform:scale(.97);}to{opacity:1;transform:scale(1);}}
+.mobile-links{display:flex;flex-direction:column;gap:.5rem;}
+.mobile-links a{font-family:'League Spartan',sans-serif;font-size:1.1rem;letter-spacing:.1em;text-transform:uppercase;color:var(--cream);text-decoration:none;padding:.85rem 1rem;border:1px solid transparent;border-radius:4px;transition:all .25s;}
+.mobile-links a:hover,.mobile-links a.active{border-color:rgba(61,99,68,.3);background:rgba(61,99,68,.1);color:var(--red);}
+.mobile-ctas{display:flex;flex-direction:column;gap:.75rem;}
+.mobile-cta-outline{display:block;width:100%;text-align:center;text-decoration:none;font-family:'League Spartan',sans-serif;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;padding:.85rem;color:var(--cream);border:1px solid rgba(247,218,159,.3);transition:all .3s;}
+.mobile-cta-outline:hover{border-color:var(--red);color:var(--red);}
+.mobile-cta-primary{display:block;width:100%;text-align:center;text-decoration:none;font-family:'League Spartan',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.85rem;color:#fff;background:var(--red);transition:background .3s;}
+.mobile-cta-primary:hover{background:#e02a1e;}
+
+/* ── BLOG HERO ── */
+.blog-hero{min-height:50vh;display:flex;align-items:center;padding:120px 0 80px;position:relative;overflow:hidden;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(61,99,68,.18) 0%,transparent 70%);border-bottom:1px solid rgba(61,99,68,.2);}
+.blog-hero-deco{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+.blog-hero-deco svg{position:absolute;opacity:.07;}
+.blog-hero-inner{text-align:center;max-width:720px;margin:0 auto;padding:0 2rem;position:relative;z-index:1;}
+.hero-eyebrow{font-family:'League Spartan',sans-serif;font-size:.65rem;letter-spacing:.35em;text-transform:uppercase;color:var(--green);margin-bottom:20px;display:block;}
+.blog-hero h1{font-size:clamp(3rem,8vw,5.5rem);font-weight:900;line-height:1;margin-bottom:24px;color:var(--cream);}
+.blog-hero h1 em{color:var(--red);font-style:normal;}
+.blog-hero p{font-size:clamp(1rem,2.5vw,1.2rem);line-height:1.8;color:var(--cream-dim);margin-bottom:40px;}
+.blog-search{display:flex;max-width:420px;margin:0 auto;border:1px solid rgba(247,218,159,.2);border-radius:9999px;background:rgba(255,255,255,.04);overflow:hidden;transition:border-color .3s;}
+.blog-search:focus-within{border-color:rgba(61,99,68,.6);}
+.blog-search input{flex:1;background:none;border:none;outline:none;padding:.8rem 1.4rem;color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:1rem;}
+.blog-search input::placeholder{color:var(--cream-faint);font-style:italic;}
+.blog-search button{background:none;border:none;padding:.8rem 1.2rem;cursor:pointer;color:var(--cream-faint);font-size:1rem;transition:color .2s;}
+.blog-search button:hover{color:var(--cream);}
+
+/* ── FEATURED ── */
+.featured-section{padding:70px 0 0;}
+.section-label{font-family:'League Spartan',sans-serif;font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--cream-faint);display:flex;align-items:center;gap:12px;margin-bottom:32px;}
+.section-label::after{content:'';flex:1;height:1px;background:rgba(247,218,159,.1);}
+.featured-card{display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(61,99,68,.25);border-radius:4px;overflow:hidden;background:rgba(255,255,255,.02);transition:border-color .3s;min-height:400px;}
+.featured-card:hover{border-color:rgba(61,99,68,.5);}
+.featured-visual{position:relative;background:radial-gradient(ellipse 80% 80% at 40% 50%,rgba(61,99,68,.3) 0%,rgba(8,8,8,.9) 100%);overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:320px;}
+.featured-visual svg{position:absolute;width:70%;height:70%;opacity:.2;}
+.fv-glow{position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(61,99,68,.5),transparent 70%);filter:blur(40px);}
+.feat-badge{position:absolute;top:20px;left:20px;font-family:'League Spartan',sans-serif;font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;background:var(--red);color:#fff;padding:.35rem .9rem;border-radius:2px;}
+.featured-body{padding:48px 40px;display:flex;flex-direction:column;justify-content:center;}
+
+/* Category tags */
+.art-cat-tag{display:inline-block;font-family:'League Spartan',sans-serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;padding:.3rem .8rem;border-radius:2px;margin-bottom:20px;}
+.tag-fundamentos{background:rgba(252,56,41,.12);color:#FC3829;border:1px solid rgba(252,56,41,.3);}
+.tag-orixas{background:rgba(212,160,23,.1);color:#D4A017;border:1px solid rgba(212,160,23,.3);}
+.tag-rituais{background:rgba(61,99,68,.2);color:#6db87b;border:1px solid rgba(61,99,68,.4);}
+.tag-entidades{background:rgba(107,63,160,.15);color:#a67dd4;border:1px solid rgba(107,63,160,.3);}
+.tag-ancestralidade{background:rgba(194,107,63,.15);color:#e08a56;border:1px solid rgba(194,107,63,.3);}
+.tag-iniciantes{background:rgba(45,125,125,.15);color:#5ab8b8;border:1px solid rgba(45,125,125,.3);}
+
+.featured-body h2{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;line-height:1.2;color:var(--cream);margin-bottom:16px;}
+.art-excerpt{font-size:1rem;line-height:1.85;color:var(--cream-dim);margin-bottom:28px;}
+.art-meta{display:flex;align-items:center;gap:10px;font-family:'League Spartan',sans-serif;font-size:.63rem;letter-spacing:.1em;color:var(--cream-faint);text-transform:uppercase;margin-bottom:28px;flex-wrap:wrap;}
+.art-meta-dot{color:rgba(61,99,68,.7);}
+.btn-read-featured{display:inline-flex;align-items:center;gap:8px;font-family:'League Spartan',sans-serif;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;color:var(--cream);border:1px solid rgba(247,218,159,.3);padding:.7rem 1.6rem;border-radius:2px;transition:all .3s;align-self:flex-start;}
+.btn-read-featured:hover{background:var(--red);border-color:var(--red);}
+.btn-read-featured svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;transition:transform .3s;}
+.btn-read-featured:hover svg{transform:translateX(4px);}
+
+/* ── FILTER ── */
+.filter-section{padding:60px 0 0;}
+.filter-heading{font-family:'League Spartan',sans-serif;font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--cream-faint);margin-bottom:18px;}
+.filter-pills{display:flex;gap:8px;flex-wrap:wrap;}
+.filter-btn{font-family:'League Spartan',sans-serif;font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;background:transparent;color:var(--cream-dim);border:1px solid rgba(247,218,159,.2);border-radius:9999px;padding:.5rem 1.2rem;cursor:pointer;transition:all .25s;}
+.filter-btn:hover{border-color:rgba(247,218,159,.5);color:var(--cream);}
+.filter-btn.active{background:var(--cream);color:var(--black);border-color:var(--cream);}
+
+/* ── ARTICLES GRID ── */
+.articles-section{padding:40px 0 80px;}
+.articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.art-card{border:1px solid rgba(61,99,68,.2);border-radius:4px;background:rgba(255,255,255,.02);overflow:hidden;transition:border-color .3s,transform .3s;display:flex;flex-direction:column;}
+.art-card:hover{border-color:rgba(61,99,68,.5);transform:translateY(-4px);}
+.art-card.hidden{display:none;}
+.art-thumb{height:200px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.art-thumb svg{position:absolute;inset:0;width:100%;height:100%;opacity:.18;}
+.art-thumb-glow{position:absolute;width:130px;height:130px;border-radius:50%;filter:blur(35px);opacity:.35;}
+.art-cat-badge{position:absolute;bottom:14px;left:14px;font-family:'League Spartan',sans-serif;font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;padding:.28rem .7rem;border-radius:2px;}
+.art-body{padding:24px;display:flex;flex-direction:column;flex:1;}
+.art-meta-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
+.art-date,.art-read{font-family:'League Spartan',sans-serif;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--cream-faint);}
+.art-title{font-size:1rem;font-weight:900;line-height:1.3;color:var(--cream);margin-bottom:12px;text-transform:uppercase;letter-spacing:.03em;}
+.art-excerpt-short{font-size:.9rem;line-height:1.75;color:var(--cream-dim);margin-bottom:20px;flex:1;}
+.btn-read{display:inline-flex;align-items:center;gap:6px;font-family:'League Spartan',sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--green-light);transition:gap .2s,color .2s;align-self:flex-start;margin-top:auto;}
+.btn-read:hover{color:var(--red);gap:10px;}
+.btn-read svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;}
+.no-results{grid-column:1/-1;text-align:center;padding:80px 20px;color:var(--cream-faint);font-size:1rem;font-style:italic;}
+
+/* ── NEWSLETTER ── */
+.blog-nl{padding:80px 0;border-top:1px solid rgba(61,99,68,.2);background:linear-gradient(180deg,transparent,rgba(61,99,68,.06));}
+.blog-nl-inner{max-width:540px;margin:0 auto;text-align:center;}
+.sec-eye{font-family:'League Spartan',sans-serif;font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--green);margin-bottom:16px;display:block;}
+.blog-nl h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;line-height:1.15;color:var(--cream);margin-bottom:16px;}
+.blog-nl h2 em{color:var(--red);font-style:normal;}
+.blog-nl p{color:var(--cream-dim);font-size:1rem;line-height:1.75;margin-bottom:36px;}
+.blog-nl-form{display:flex;gap:12px;max-width:440px;margin:0 auto;}
+.blog-nl-input{flex:1;background:rgba(8,8,8,.8);border:1px solid rgba(61,99,68,.3);color:var(--cream);padding:.9rem 1.2rem;font-family:'Cormorant Garamond',serif;font-size:.95rem;outline:none;transition:border-color .3s;border-radius:2px;}
+.blog-nl-input:focus{border-color:var(--red);}
+.blog-nl-input::placeholder{color:var(--cream-faint);font-style:italic;}
+.blog-nl-btn{font-family:'League Spartan',sans-serif;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;background:var(--red);color:#fff;border:none;padding:.9rem 1.4rem;cursor:pointer;transition:background .3s;border-radius:2px;white-space:nowrap;}
+.blog-nl-btn:hover{background:#e02a1e;}
+
+/* ── FOOTER ── */
+footer{background:#040404;padding:4.5rem 2rem 2rem;border-top:1px solid rgba(61,99,68,.25);}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;max-width:1200px;margin:0 auto 3rem;}
+.foot-brand img{width:80px;height:80px;border-radius:50%;margin-bottom:1rem;border:1px solid rgba(61,99,68,.4);filter:drop-shadow(0 0 16px rgba(252,56,41,.2));}
+.foot-brand-name{font-family:'League Spartan',sans-serif;font-size:1rem;letter-spacing:.12em;color:var(--cream);}
+.foot-brand-sub{font-family:'League Spartan',sans-serif;font-size:.62rem;letter-spacing:.24em;color:var(--red);margin-bottom:1rem;}
+.foot-brand p{font-size:.88rem;color:var(--cream-faint);line-height:1.72;margin-bottom:1.5rem;}
+.socials{display:flex;gap:.6rem;}
+.soc{width:34px;height:34px;border:1px solid rgba(61,99,68,.35);display:flex;align-items:center;justify-content:center;color:var(--cream-dim);text-decoration:none;transition:all .3s;}
+.soc:hover{border-color:var(--red);color:var(--red);background:rgba(252,56,41,.08);}
+.foot-col h4{font-size:.7rem;letter-spacing:.22em;color:var(--cream);margin-bottom:1.4rem;padding-bottom:.7rem;border-bottom:1px solid rgba(61,99,68,.25);}
+.foot-links{list-style:none;display:flex;flex-direction:column;gap:.7rem;}
+.foot-links a{color:var(--cream-faint);text-decoration:none;font-size:.9rem;font-style:italic;transition:color .3s;}
+.foot-links a:hover{color:var(--red);}
+.foot-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(61,99,68,.18);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.foot-bottom p{font-size:.75rem;color:var(--cream-faint);font-family:'League Spartan',sans-serif;letter-spacing:.06em;}
+
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .articles-grid{grid-template-columns:repeat(2,1fr);}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  nav{padding:.9rem 1.2rem;}
+  .nav-desktop{display:none;}
+  .menu-toggle{display:flex;}
+  .featured-card{grid-template-columns:1fr;}
+  .featured-visual{min-height:200px;}
+  .featured-body{padding:28px 24px;}
+  .articles-grid{grid-template-columns:1fr;}
+  .blog-nl-form{flex-direction:column;}
+  .foot-grid{grid-template-columns:1fr;}
+  .foot-bottom{flex-direction:column;text-align:center;}
+}
+@media(max-width:480px){
+  .blog-hero h1{font-size:2.6rem;}
+  .filter-pills{gap:6px;}
+  .filter-btn{font-size:.58rem;padding:.42rem .9rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header id="site-header">
+  <nav id="nav">
+    <a href="index.html" class="nav-brand">
+      <img src="logo encruzilhadas main.png" alt="Logo Encruzilhadas">
+      <div class="nav-brand-text">Encruzilhadas<em>do Saber</em></div>
+    </a>
+    <div class="nav-desktop">
+      <ul class="slide-nav" id="slideNav">
+        <li class="slide-tab"><a href="index.html#terreiro">Terreiro</a></li>
+        <li class="slide-tab active"><a href="blog.html">Blog</a></li>
+        <li class="slide-tab"><a href="terapias.html">Terapias</a></li>
+        <li class="slide-tab"><a href="index.html#comunidade">Comunidade</a></li>
+        <li class="slide-tab"><a href="index.html#produtos">Loja</a></li>
+        <li class="slide-cursor" id="slideCursor" aria-hidden="true"></li>
+      </ul>
+      <a href="index.html#newsletter" class="nav-cta-btn">Entrar</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+      <svg class="menu-icon" id="menuIcon" viewBox="0 0 32 32">
+        <path class="menu-path-top" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"/>
+        <path d="M7 16 27 16"/>
+      </svg>
+    </button>
+  </nav>
+  <div class="mobile-panel" id="mobilePanel">
+    <div class="mobile-panel-inner">
+      <div class="mobile-links">
+        <a href="index.html#terreiro">Terreiro</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="terapias.html">Terapias</a>
+        <a href="index.html#comunidade">Comunidade</a>
+        <a href="index.html#produtos">Loja</a>
+      </div>
+      <div class="mobile-ctas">
+        <a href="index.html#newsletter" class="mobile-cta-outline">Entrar</a>
+        <a href="index.html" class="mobile-cta-primary">Voltar ao Site</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- BLOG HERO -->
+<section class="blog-hero">
+  <div class="blog-hero-deco" aria-hidden="true">
+    <svg style="top:-60px;left:-80px;width:380px;height:380px;" viewBox="0 0 300 300" fill="none">
+      <circle cx="150" cy="150" r="120" stroke="#3D6344" stroke-width="1"/>
+      <circle cx="150" cy="150" r="80" stroke="#FC3829" stroke-width=".5"/>
+      <polygon points="150,30 170,115 255,115 186,167 210,252 150,200 90,252 114,167 45,115 130,115" stroke="#F7DA9F" stroke-width=".5" fill="none"/>
+    </svg>
+    <svg style="bottom:-60px;right:-80px;width:340px;height:340px;transform:rotate(180deg);" viewBox="0 0 300 300" fill="none">
+      <circle cx="150" cy="150" r="110" stroke="#3D6344" stroke-width="1"/>
+      <circle cx="150" cy="150" r="70" stroke="#FC3829" stroke-width=".5"/>
+      <polygon points="150,40 168,108 238,108 182,150 204,218 150,176 96,218 118,150 62,108 132,108" stroke="#F7DA9F" stroke-width=".5" fill="none"/>
+    </svg>
+  </div>
+  <div class="blog-hero-inner">
+    <span class="hero-eyebrow">✦ Conhecimento que liberta ✦</span>
+    <h1>O Blog do <em>Saber</em></h1>
+    <p>Artigos, reflexões e fundamentos sobre Umbanda,<br>ancestralidade e espiritualidade afro-brasileira.</p>
+    <div class="blog-search">
+      <input type="search" id="searchInput" placeholder="Buscar artigos, orixás, rituais...">
+      <button aria-label="Buscar">🔍</button>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED ARTICLE -->
+<section class="featured-section">
+  <div class="container">
+    <div class="section-label reveal">✦ Artigo em Destaque</div>
+    <div class="featured-card reveal">
+      <div class="featured-visual">
+        <div class="fv-glow"></div>
+        <svg viewBox="0 0 400 400" fill="none">
+          <circle cx="200" cy="200" r="170" stroke="#F7DA9F" stroke-width="1"/>
+          <circle cx="200" cy="200" r="125" stroke="#3D6344" stroke-width=".8"/>
+          <circle cx="200" cy="200" r="80" stroke="#FC3829" stroke-width="1"/>
+          <circle cx="200" cy="200" r="40" stroke="#F7DA9F" stroke-width=".6"/>
+          <line x1="200" y1="30" x2="200" y2="370" stroke="#3D6344" stroke-width=".8"/>
+          <line x1="30" y1="200" x2="370" y2="200" stroke="#3D6344" stroke-width=".8"/>
+          <line x1="80" y1="80" x2="320" y2="320" stroke="#FC3829" stroke-width=".5" opacity=".7"/>
+          <line x1="320" y1="80" x2="80" y2="320" stroke="#FC3829" stroke-width=".5" opacity=".7"/>
+          <polygon points="200,40 222,162 344,162 248,236 284,358 200,284 116,358 152,236 56,162 178,162" stroke="#F7DA9F" stroke-width=".8" fill="none"/>
+        </svg>
+        <span class="feat-badge">✦ Em Destaque</span>
+      </div>
+      <div class="featured-body">
+        <span class="art-cat-tag tag-fundamentos">Fundamentos</span>
+        <h2>O que é Umbanda? Um Olhar Profundo Sobre a Religião Mais Brasileira do Mundo</h2>
+        <p class="art-excerpt">A Umbanda nasceu no Brasil no início do século XX, fruto do encontro de três grandes matrizes espirituais: a sabedoria ancestral africana dos Orixás, a devoção cristã dos santos e o espiritismo de Allan Kardec. Mas reduzi-la a uma simples "mistura" seria ignorar o que é, na verdade, uma revelação espiritual genuinamente brasileira — viva, plural e profundamente humana.</p>
+        <div class="art-meta">
+          <span>Por Carla Dias</span>
+          <span class="art-meta-dot">◆</span>
+          <span>05 mai 2026</span>
+          <span class="art-meta-dot">◆</span>
+          <span>8 min de leitura</span>
+        </div>
+        <a href="em-breve.html" class="btn-read-featured">
+          Ler Artigo Completo
+          <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY FILTER -->
+<section class="filter-section">
+  <div class="container">
+    <p class="filter-heading">Filtrar por categoria:</p>
+    <div class="filter-pills">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="fundamentos">Fundamentos</button>
+      <button class="filter-btn" data-filter="orixas">Orixás</button>
+      <button class="filter-btn" data-filter="rituais">Rituais</button>
+      <button class="filter-btn" data-filter="entidades">Entidades</button>
+      <button class="filter-btn" data-filter="ancestralidade">Ancestralidade</button>
+      <button class="filter-btn" data-filter="iniciantes">Para Iniciantes</button>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES GRID -->
+<section class="articles-section">
+  <div class="container">
+    <div class="articles-grid" id="articlesGrid">
+
+      <!-- 1: Orixás -->
+      <article class="art-card reveal" data-cat="orixas" data-title="os 7 orixas e seus dominios guia completo para iniciantes">
+        <div class="art-thumb" style="background:linear-gradient(160deg,#1a1200,#2d1f00);">
+          <div class="art-thumb-glow" style="background:#D4A017;top:30%;left:20%;"></div>
+          <svg viewBox="0 0 300 200" fill="none">
+            <circle cx="150" cy="100" r="70" stroke="#D4A017" stroke-width="1.5"/>
+            <circle cx="150" cy="100" r="44" stroke="#D4A017" stroke-width=".7"/>
+            <line x1="150" y1="10" x2="150" y2="190" stroke="#D4A017" stroke-width=".8"/>
+            <line x1="60" y1="100" x2="240" y2="100" stroke="#D4A017" stroke-width=".8"/>
+            <polygon points="150,32 163,77 208,77 173,103 186,148 150,122 114,148 127,103 92,77 137,77" stroke="#F7DA9F" stroke-width=".6" fill="none"/>
+          </svg>
+          <span class="art-cat-badge tag-orixas">Orixás</span>
+        </div>
+        <div class="art-body">
+          <div class="art-meta-top"><span class="art-date">28 abr 2026</span><span class="art-read">12 min</span></div>
+          <h3 class="art-title">Os 7 Orixás e Seus Domínios: Guia Completo para Iniciantes</h3>
+          <p class="art-excerpt-short">Cada Orixá governa forças da natureza e aspectos da existência humana. Ogum abre os caminhos. Iemanjá cuida das emoções. Oxum rege o amor. Conhecer os Orixás é o primeiro passo para entender a Umbanda.</p>
+          <a href="em-breve.html" class="btn-read">Ler artigo <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </article>
+
+      <!-- 2: Rituais -->
+      <article class="art-card reveal" data-cat="rituais" data-title="o que e gira na umbanda entenda este ritual sagrado">
+        <div class="art-thumb" style="background:linear-gradient(160deg,#040f06,#091808);">
+          <div class="art-thumb-glow" style="background:#3D6344;top:20%;left:30%;"></div>
+          <svg viewBox="0 0 300 200" fill="none">
+            <line x1="150" y1="22" x2="150" y2="178" stroke="#6db87b" stroke-width="2"/>
+            <ellipse cx="150" cy="42" rx="18" ry="26" stroke="#FC3829" stroke-width="1.2"/>
+            <path d="M133 42 Q150 14 167 42" stroke="#FC3829" stroke-width="1" fill="none"/>
+            <ellipse cx="150" cy="178" rx="28" ry="8" stroke="#6db87b" stroke-width="1" fill="none"/>
+            <line x1="85" y1="105" x2="128" y2="105" stroke="#6db87b" stroke-width=".8"/>
+            <line x1="172" y1="105" x2="215" y2="105" stroke="#6db87b" stroke-width=".8"/>
+            <circle cx="150" cy="105" r="55" stroke="#3D6344" stroke-width=".5"/>
+          </svg>
+          <span class="art-cat-badge tag-rituais">Rituais</span>
+        </div>
+        <div class="art-body">
+          <div class="art-meta-top"><span class="art-date">20 abr 2026</span><span class="art-read">6 min</span></div>
+          <h3 class="art-title">O que é Gira na Umbanda? Entenda Este Ritual Sagrado</h3>
+          <p class="art-excerpt-short">A gira é o coração pulsante de um terreiro de Umbanda — o momento em que as entidades se manifestam para oferecer orientação, cura e axé aos filhos de fé que chegam até elas.</p>
+          <a href="em-breve.html" class="btn-read">Ler artigo <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </article>
+
+      <!-- 3: Entidades / Exu -->
+      <article class="art-card reveal" data-cat="entidades" data-title="exu desfazendo mitos sobre o mensageiro dos orixas">
+        <div class="art-thumb" style="background:linear-gradient(160deg,#0d0018,#1c0035);">
+          <div class="art-thumb-glow" style="background:#6B3FA0;top:25%;left:25%;"></div>
+          <svg viewBox="0 0 300 200" fill="none">
+            <line x1="150" y1="20" x2="150" y2="180" stroke="#a67dd4" stroke-width="1.5"/>
+            <line x1="60" y1="100" x2="240" y2="100" stroke="#a67dd4" stroke-width="1.5"/>
+            <circle cx="150" cy="100" r="55" stroke="#a67dd4" stroke-width=".8"/>
+            <circle cx="150" cy="100" r="28" stroke="#FC3829" stroke-width=".8"/>
+            <polygon points="150,58 164,94 202,94 172,116 184,152 150,130 116,152 128,116 98,94 136,94" stroke="#a67dd4" stroke-width=".6" fill="none"/>
+          </svg>
+          <span class="art-cat-badge tag-entidades">Entidades</span>
+        </div>
+        <div class="art-body">
+          <div class="art-meta-top"><span class="art-date">14 abr 2026</span><span class="art-read">7 min</span></div>
+          <h3 class="art-title">Exu: Desfazendo os Mitos sobre o Mensageiro dos Orixás</h3>
+          <p class="art-excerpt-short">Confundido com o diabo cristão pela intolerância do passado, Exu é o Senhor das Encruzilhadas — mensageiro entre o mundo material e espiritual, guardião dos caminhos e das portas.</p>
+          <a href="em-breve.html" class="btn-read">Ler artigo <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </article>
+
+      <!-- 4: Para Iniciantes -->
+      <article class="art-card reveal" data-cat="iniciantes" data-title="como se preparar para sua primeira gira">
+        <div class="art-thumb" style="background:linear-gradient(160deg,#001a1a,#002d2d);">
+          <div class="art-thumb-glow" style="background:#2D7D7D;top:30%;left:20%;"></div>
+          <svg viewBox="0 0 300 200" fill="none">
+            <rect x="82" y="52" width="136" height="108" rx="4" stroke="#5ab8b8" stroke-width="1.2"/>
+            <line x1="102" y1="82" x2="198" y2="82" stroke="#5ab8b8" stroke-width=".8"/>
+            <line x1="102" y1="100" x2="198" y2="100" stroke="#5ab8b8" stroke-width=".8"/>
+            <line x1="102" y1="118" x2="158" y2="118" stroke="#5ab8b8" stroke-width=".8"/>
+            <circle cx="150" cy="42" r="13" stroke="#FC3829" stroke-width="1.2"/>
+            <circle cx="150" cy="100" r="68" stroke="#2D7D7D" stroke-width=".4"/>
+          </svg>
+          <span class="art-cat-badge tag-iniciantes">Para Iniciantes</span>
+        </div>
+        <div class="art-body">
+          <div class="art-meta-top"><span class="art-date">08 abr 2026</span><span class="art-read">5 min</span></div>
+          <h3 class="art-title">Como Se Preparar para Sua Primeira Gira</h3>
+          <p class="art-excerpt-short">Chegar pela primeira vez a um terreiro pode ser uma experiência de profunda emoção — e também de muitas dúvidas. O que vestir? Como agir? Este guia responde tudo que o iniciante precisa saber.</p>
+          <a href="em-breve.html" class="btn-read">Ler artigo <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </article>
+
+      <!-- 5: Ancestralidade -->
+      <article class="art-card reveal" data-cat="ancestralidade" data-title="ancestralidade africana como ela vive dentro da umbanda">
+        <div class="art-thumb" style="background:linear-gradient(160deg,#1a0a00,#2e1400);">
+          <div class="art-thumb-glow" style="background:#C26B3F;top:20%;left:30%;"></div>
+          <svg viewBox="0 0 300 200" fill="none">
+            <line x1="150" y1="168" x2="150" y2="82" stroke="#e08a56" stroke-width="1.5"/>
+            <line x1="150" y1="112" x2="100" y2="70" stroke="#e08a56" stroke-width="1"/>
+            <line x1="150" y1="130" x2="202" y2="88" stroke="#e08a56" stroke-width="1"/>
+            <line x1="150" y1="100" x2="108" y2="50" stroke="#e08a56" stroke-width=".8"/>
+            <line x1="150" y1="100" x2="192" y2="50" stroke="#e08a56" stroke-width=".8"/>
+            <circle cx="150" cy="74" r="12" stroke="#FC3829" stroke-width="1.2"/>
+            <circle cx="98" cy="60" r="8" stroke="#e08a56" stroke-width=".8"/>
+            <circle cx="204" cy="60" r="8" stroke="#e08a56" stroke-width=".8"/>
+            <circle cx="106" cy="42" r="5" stroke="#e08a56" stroke-width=".6"/>
+            <circle cx="194" cy="42" r="5" stroke="#e08a56" stroke-width=".6"/>
+            <circle cx="150" cy="100" r="78" stroke="#C26B3F" stroke-width=".4"/>
+          </svg>
+          <span class="art-cat-badge tag-ancestralidade">Ancestralidade</span>
+        </div>
+        <div class="art-body">
+          <div class="art-meta-top"><span class="art-date">01 abr 2026</span><span class="art-read">9 min</span></div>
+          <h3 class="art-title">Ancestralidade Africana: Como Ela Vive Dentro da Umbanda</h3>
+          <p class="art-excerpt-short">A Umbanda carrega em seu coração a memória dos povos africanos que chegaram acorrentados, mas trouxeram consigo sua fé, seus Orixás e sua sabedoria. Compreender essa herança é compreender a alma da Umbanda.</p>
+          <a href="em-breve.html" class="btn-read">Ler artigo <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </article>
+
+      <!-- 6: Rituais / Ervas -->
+      <article class="art-card reveal" data-cat="rituais" data-title="a importancia das ervas nos rituais de umbanda ossaim">
+        <div class="art-thumb" style="background:linear-gradient(160deg,#040f06,#0a1f0c);">
+          <div class="art-thumb-glow" style="background:#3D6344;top:35%;left:35%;"></div>
+          <svg viewBox="0 0 300 200" fill="none">
+            <ellipse cx="150" cy="155" rx="85" ry="18" stroke="#6db87b" stroke-width=".8"/>
+            <path d="M102 155 Q112 82 150 44 Q188 82 198 155" stroke="#6db87b" stroke-width="1.2" fill="none"/>
+            <circle cx="150" cy="98" r="28" stroke="#3D6344" stroke-width=".8"/>
+            <path d="M132 98 Q150 72 168 98 Q150 124 132 98Z" stroke="#FC3829" stroke-width=".8" fill="none"/>
+            <line x1="118" y1="62" x2="182" y2="62" stroke="#6db87b" stroke-width=".6"/>
+          </svg>
+          <span class="art-cat-badge tag-rituais">Rituais</span>
+        </div>
+        <div class="art-body">
+          <div class="art-meta-top"><span class="art-date">25 mar 2026</span><span class="art-read">6 min</span></div>
+          <h3 class="art-title">A Importância das Ervas nos Rituais de Umbanda</h3>
+          <p class="art-excerpt-short">Filhas de Ossaim, as ervas sagradas carregam axé específico. Banhos de ervas, defumações e chás rituais são poderosas ferramentas de limpeza espiritual e cura na tradição umbandista.</p>
+          <a href="em-breve.html" class="btn-read">Ler artigo <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </article>
+
+      <!-- 7: Entidades / Pomba Gira -->
+      <article class="art-card reveal" data-cat="entidades" data-title="pomba gira quem e esta entidade e por que e tao mal interpretada">
+        <div class="art-thumb" style="background:linear-gradient(160deg,#0d0018,#1c0030);">
+          <div class="art-thumb-glow" style="background:#9B59B6;top:28%;left:28%;"></div>
+          <svg viewBox="0 0 300 200" fill="none">
+            <circle cx="150" cy="100" r="65" stroke="#a67dd4" stroke-width=".8"/>
+            <path d="M150 35 C110 50 90 80 100 110 C110 140 140 155 150 165 C160 155 190 140 200 110 C210 80 190 50 150 35Z" stroke="#a67dd4" stroke-width="1" fill="none"/>
+            <line x1="150" y1="35" x2="150" y2="165" stroke="#6B3FA0" stroke-width=".8"/>
+            <line x1="88" y1="100" x2="212" y2="100" stroke="#6B3FA0" stroke-width=".8"/>
+            <circle cx="150" cy="100" r="22" stroke="#FC3829" stroke-width=".8"/>
+          </svg>
+          <span class="art-cat-badge tag-entidades">Entidades</span>
+        </div>
+        <div class="art-body">
+          <div class="art-meta-top"><span class="art-date">18 mar 2026</span><span class="art-read">8 min</span></div>
+          <h3 class="art-title">Pomba Gira: Quem É Esta Entidade e Por que É Tão Mal Interpretada</h3>
+          <p class="art-excerpt-short">Guardiã dos segredos do amor e da liberdade feminina, Pomba Gira é uma das entidades mais incompreendidas da Umbanda. Ela representa a força da mulher que conhece seus direitos e age com consciência.</p>
+          <a href="em-breve.html" class="btn-read">Ler artigo <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </article>
+
+      <!-- 8: Entidades / Caboclos e Pretos Velhos -->
+      <article class="art-card reveal" data-cat="entidades" data-title="caboclos e pretos velhos guardioes da sabedoria ancestral">
+        <div class="art-thumb" style="background:linear-gradient(160deg,#0a0500,#1c0f00);">
+          <div class="art-thumb-glow" style="background:#8B6914;top:25%;left:25%;"></div>
+          <svg viewBox="0 0 300 200" fill="none">
+            <circle cx="100" cy="88" r="34" stroke="#D4A017" stroke-width=".8"/>
+            <circle cx="200" cy="88" r="34" stroke="#D4A017" stroke-width=".8"/>
+            <line x1="100" y1="122" x2="100" y2="168" stroke="#D4A017" stroke-width="1.2"/>
+            <line x1="200" y1="122" x2="200" y2="168" stroke="#D4A017" stroke-width="1.2"/>
+            <line x1="100" y1="148" x2="200" y2="148" stroke="#D4A017" stroke-width=".8"/>
+            <path d="M80 88 Q100 58 120 88" stroke="#F7DA9F" stroke-width=".8" fill="none"/>
+            <path d="M180 88 Q200 58 220 88" stroke="#F7DA9F" stroke-width=".8" fill="none"/>
+          </svg>
+          <span class="art-cat-badge tag-entidades">Entidades</span>
+        </div>
+        <div class="art-body">
+          <div class="art-meta-top"><span class="art-date">12 mar 2026</span><span class="art-read">7 min</span></div>
+          <h3 class="art-title">Caboclos e Pretos Velhos: Guardiões da Sabedoria Ancestral</h3>
+          <p class="art-excerpt-short">Os Caboclos trazem a força e determinação dos índios brasileiros. Os Pretos Velhos são a sabedoria personificada — espíritos que retornam, após tanto sofrimento, para curar e orientar com amor infinito.</p>
+          <a href="em-breve.html" class="btn-read">Ler artigo <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </article>
+
+      <!-- 9: Iniciantes / Sete Fundamentos -->
+      <article class="art-card reveal" data-cat="iniciantes" data-title="os sete fundamentos da umbanda o que todo filho de fe deve saber">
+        <div class="art-thumb" style="background:linear-gradient(160deg,#001a1a,#002f2f);">
+          <div class="art-thumb-glow" style="background:#2D7D7D;top:25%;left:25%;"></div>
+          <svg viewBox="0 0 300 200" fill="none">
+            <path d="M62 158 Q62 60 150 42 Q238 60 238 158" stroke="#5ab8b8" stroke-width="1.2" fill="none"/>
+            <line x1="150" y1="42" x2="150" y2="158" stroke="#5ab8b8" stroke-width=".8"/>
+            <line x1="62" y1="108" x2="238" y2="108" stroke="#5ab8b8" stroke-width=".6"/>
+            <circle cx="150" cy="42" r="12" stroke="#FC3829" stroke-width="1.2"/>
+            <polygon points="150,72 162,106 196,106 170,126 180,160 150,140 120,160 130,126 104,106 138,106" stroke="#F7DA9F" stroke-width=".5" fill="none"/>
+          </svg>
+          <span class="art-cat-badge tag-iniciantes">Para Iniciantes</span>
+        </div>
+        <div class="art-body">
+          <div class="art-meta-top"><span class="art-date">05 mar 2026</span><span class="art-read">10 min</span></div>
+          <h3 class="art-title">Os Sete Fundamentos da Umbanda: O que Todo Filho de Fé Deve Saber</h3>
+          <p class="art-excerpt-short">Antes de qualquer ritual, existe uma base de princípios que sustenta toda a prática umbandista. Conheça os sete pilares que fundamentam esta religião de amor, caridade e axé.</p>
+          <a href="em-breve.html" class="btn-read">Ler artigo <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </article>
+
+      <div class="no-results" id="noResults" style="display:none;">
+        <p>Nenhum artigo encontrado.<br><em>Em breve, novos conteúdos serão publicados.</em></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="blog-nl">
+  <div class="blog-nl-inner reveal">
+    <span class="sec-eye">✦ Fique por dentro</span>
+    <h2>Receba o Axé<br>em seu <em>E-mail</em></h2>
+    <p>Novos artigos, datas litúrgicas e conteúdos exclusivos sobre Umbanda e ancestralidade — direto na sua caixa de entrada. Sem spam, só fundamento.</p>
+    <form class="blog-nl-form" onsubmit="handleNlSubmit(event)">
+      <input type="email" class="blog-nl-input" placeholder="seu@email.com" required>
+      <button type="submit" class="blog-nl-btn">Receber ✦</button>
+    </form>
+    <p style="font-size:.75rem;color:var(--cream-faint);margin-top:14px;font-style:italic;">Sem spam. Consulte nossa <a href="EncruzilhadasdoSaber_PrivacyPolicy_v1.html" style="color:var(--cream-faint);text-decoration:underline;">Política de Privacidade</a>.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <img src="logo encruzilhadas main.png" alt="Logo">
+      <p class="foot-brand-name">Encruzilhadas</p>
+      <p class="foot-brand-sub">do Saber</p>
+      <p>Um espaço dedicado à preservação, ensino e celebração da espiritualidade afro-brasileira com amor, respeito e axé.</p>
+      <div class="socials">
+        <a href="#" class="soc" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" class="soc" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="3"/><polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" class="soc" aria-label="WhatsApp"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+        <a href="#" class="soc" aria-label="Telegram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg></a>
+      </div>
+    </div>
+    <div class="foot-col">
+      <h4>Navegue</h4>
+      <ul class="foot-links">
+        <li><a href="index.html#terreiro">Terreiro Online</a></li>
+        <li><a href="blog.html">Blog do Saber</a></li>
+        <li><a href="index.html#comunidade">Comunidade</a></li>
+        <li><a href="index.html#produtos">Loja</a></li>
+        <li><a href="index.html">Página Inicial</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Aprenda</h4>
+      <ul class="foot-links">
+        <li><a href="blog.html">Os Orixás</a></li>
+        <li><a href="blog.html">As Entidades</a></li>
+        <li><a href="blog.html">Rituais</a></li>
+        <li><a href="blog.html">Ervas Sagradas</a></li>
+        <li><a href="quiz-umbanda.html">Quiz de Umbanda</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Ajuda</h4>
+      <ul class="foot-links">
+        <li><a href="#">Fale Conosco</a></li>
+        <li><a href="#">Perguntas Frequentes</a></li>
+        <li><a href="EncruzilhadasdoSaber_PrivacyPolicy_v1.html">Política de Privacidade</a></li>
+        <li><a href="EncruzilhadasdoSaber_PrivacyPolicy_v1.html">Termos de Uso</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <p>&copy; 2026 Encruzilhadas do Saber. Todos os direitos reservados.</p>
+    <p>Feito com ◆ Axé e Amor</p>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const siteHeader = document.getElementById('site-header');
+const navEl      = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  const s = window.scrollY > 10;
+  siteHeader.classList.toggle('scrolled', s);
+  navEl.classList.toggle('scrolled', s);
+});
+
+// Nav sliding cursor — lock on active tab
+const slideNav    = document.getElementById('slideNav');
+const slideCursor = document.getElementById('slideCursor');
+const tabs        = slideNav.querySelectorAll('.slide-tab');
+const activeTab   = slideNav.querySelector('.slide-tab.active');
+
+function moveCursor(tab) {
+  slideCursor.style.left    = tab.offsetLeft + 'px';
+  slideCursor.style.width   = tab.offsetWidth + 'px';
+  slideCursor.style.opacity = '1';
+}
+if (activeTab) requestAnimationFrame(() => moveCursor(activeTab));
+tabs.forEach(tab => tab.addEventListener('mouseenter', () => moveCursor(tab)));
+slideNav.addEventListener('mouseleave', () => { if (activeTab) moveCursor(activeTab); });
+
+// Mobile menu
+let menuOpen = false;
+const menuToggle  = document.getElementById('menuToggle');
+const menuIcon    = document.getElementById('menuIcon');
+const mobilePanel = document.getElementById('mobilePanel');
+function setMenuOpen(open) {
+  menuOpen = open;
+  menuIcon.classList.toggle('open', open);
+  mobilePanel.classList.toggle('open', open);
+  menuToggle.setAttribute('aria-expanded', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+menuToggle.addEventListener('click', () => setMenuOpen(!menuOpen));
+mobilePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenuOpen(false)));
+
+// Category filter
+const filterBtns = document.querySelectorAll('.filter-btn');
+const artCards   = document.querySelectorAll('.art-card');
+const noResults  = document.getElementById('noResults');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    let visible = 0;
+    artCards.forEach(card => {
+      const match = filter === 'all' || card.dataset.cat === filter;
+      card.classList.toggle('hidden', !match);
+      if (match) visible++;
+    });
+    noResults.style.display = visible === 0 ? 'block' : 'none';
+    document.getElementById('searchInput').value = '';
+  });
+});
+
+// Search
+document.getElementById('searchInput').addEventListener('input', function() {
+  const q = this.value.toLowerCase().trim();
+  filterBtns.forEach(b => b.classList.remove('active'));
+  filterBtns[0].classList.add('active');
+  let visible = 0;
+  artCards.forEach(card => {
+    const title   = (card.dataset.title || '').toLowerCase();
+    const excerpt = card.querySelector('.art-excerpt-short')?.textContent.toLowerCase() || '';
+    const match   = !q || title.includes(q) || excerpt.includes(q);
+    card.classList.toggle('hidden', !match);
+    if (match) visible++;
+  });
+  noResults.style.display = visible === 0 ? 'block' : 'none';
+});
+
+// Newsletter submit
+function handleNlSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button');
+  btn.textContent = '✓ Inscrito!';
+  btn.style.background = '#3D6344';
+  btn.disabled = true;
+}
+
+// Scroll reveal
+const reveals  = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('in'), i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

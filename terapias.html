@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terapias — Encruzilhadas do Saber</title>
+<meta name="description" content="Quatro caminhos de cura e transformação: Leitura de Tarô, Psicoterapia Holística, Rituais de Cortes Energéticos e Mapas Astrais. Espiritualidade com profundidade e rigor.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.encruzilhadasdosaber.com/terapias">
+<link rel="icon" type="image/png" sizes="512x512" href="logo encruzilhadas main.png">
+<link rel="apple-touch-icon" href="logo encruzilhadas main.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.encruzilhadasdosaber.com/terapias">
+<meta property="og:title" content="Terapias — Encruzilhadas do Saber">
+<meta property="og:description" content="Quatro caminhos de cura e transformação: Tarô, Psicoterapia Holística, Cortes Energéticos e Mapas Astrais.">
+<meta property="og:image" content="https://www.encruzilhadasdosaber.com/logo encruzilhadas main.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+/* ── DESIGN TOKENS ── */
+:root{
+  /* Site palette */
+  --black:#080808; --dark:#1E1E1E;
+  --red:#FC3829;   --green:#3D6344; --green-light:#4a7a54;
+  --cream:#F7DA9F; --cream-dim:rgba(247,218,159,.65); --cream-faint:rgba(247,218,159,.3);
+  /* Therapy accent colors */
+  --tarot:#C9A84C;        --tarot-dim:rgba(201,168,76,.12);    --tarot-glow:rgba(201,168,76,.35);
+  --psico:#7B5EA7;        --psico-dim:rgba(123,94,167,.12);    --psico-glow:rgba(123,94,167,.45);
+  --cortes:#B22222;       --cortes-dim:rgba(178,34,34,.1);     --cortes-glow:rgba(178,34,34,.4);
+  --astral:#4169E1;       --astral-dim:rgba(65,105,225,.12);   --astral-glow:rgba(65,105,225,.4);
+}
+
+/* ── RESET & BASE ── */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:18px;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.03;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");}
+h1,h2,h3,h4,h5{font-family:'League Spartan',sans-serif;text-transform:uppercase;letter-spacing:.04em;}
+a{text-decoration:none;}
+.container{max-width:1200px;margin:0 auto;padding:0 2rem;}
+
+/* ── NAV (identical pattern to site) ── */
+#site-header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:center;padding:0;transition:padding .35s ease-out;pointer-events:none;}
+#site-header.scrolled{padding:.9rem 1.5rem;}
+nav{pointer-events:all;width:100%;max-width:1140px;display:flex;justify-content:space-between;align-items:center;padding:.9rem 2rem;height:66px;border:1px solid transparent;border-radius:0;background:transparent;transition:all .35s ease-out;}
+nav.scrolled{max-width:980px;border-radius:10px;border-color:rgba(61,99,68,.3);background:rgba(8,8,8,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 8px 32px rgba(0,0,0,.5);padding:.5rem 1.4rem;height:54px;}
+.nav-brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;}
+.nav-brand img{width:50px;height:50px;border-radius:50%;border:1px solid rgba(252,56,41,.4);box-shadow:0 0 12px rgba(252,56,41,.25);}
+.nav-brand-text{font-family:'League Spartan',sans-serif;font-size:.78rem;letter-spacing:.14em;color:var(--cream);line-height:1.2;}
+.nav-brand-text em{display:block;color:var(--red);font-style:normal;font-size:.62rem;letter-spacing:.22em;}
+.nav-desktop{display:flex;align-items:center;gap:1rem;}
+.slide-nav{position:relative;list-style:none;display:flex;align-items:center;border-radius:9999px;border:2px solid rgba(247,218,159,.35);background:rgba(8,8,8,.6);backdrop-filter:blur(10px);padding:4px;gap:0;}
+.slide-tab{position:relative;z-index:10;cursor:pointer;}
+.slide-tab a{display:block;padding:.42rem .9rem;font-family:'League Spartan',sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cream);text-decoration:none;white-space:nowrap;transition:color .2s;}
+.slide-tab a:hover{color:var(--red);}
+.slide-tab.active a{color:var(--black);font-weight:700;}
+@media(min-width:768px){.slide-tab a{padding:.6rem 1.1rem;font-size:.72rem;}}
+.slide-cursor{position:absolute;z-index:0;top:4px;left:0;height:calc(100% - 8px);border-radius:9999px;background:var(--cream);pointer-events:none;transition:left .32s cubic-bezier(.34,1.56,.64,1),width .32s cubic-bezier(.34,1.56,.64,1),opacity .22s ease;}
+.nav-cta-btn{font-family:'League Spartan',sans-serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream);text-decoration:none;border:1px solid rgba(252,56,41,.5);padding:.5rem 1.1rem;border-radius:9999px;background:rgba(252,56,41,.12);transition:all .3s;white-space:nowrap;}
+.nav-cta-btn:hover{background:var(--red);border-color:var(--red);}
+.menu-toggle{display:none;align-items:center;justify-content:center;width:38px;height:38px;background:transparent;border:1px solid rgba(247,218,159,.3);border-radius:6px;cursor:pointer;color:var(--cream);transition:border-color .3s;}
+.menu-toggle:hover{border-color:var(--red);}
+.menu-icon{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform 300ms ease-in-out;}
+.menu-icon.open{transform:rotate(-45deg);}
+.menu-path-top{stroke-dasharray:12 63;transition:stroke-dasharray 300ms ease-in-out,stroke-dashoffset 300ms ease-in-out;}
+.menu-icon.open .menu-path-top{stroke-dasharray:20 300;stroke-dashoffset:-32.42px;}
+.mobile-panel{pointer-events:all;position:fixed;top:66px;left:0;right:0;bottom:0;z-index:199;background:rgba(8,8,8,.97);border-top:1px solid rgba(61,99,68,.25);display:none;flex-direction:column;overflow:hidden;}
+.mobile-panel.open{display:flex;}
+.mobile-panel-inner{display:flex;flex-direction:column;justify-content:space-between;height:100%;padding:1.5rem;animation:panelIn .25s ease-out;}
+@keyframes panelIn{from{opacity:0;transform:scale(.97);}to{opacity:1;transform:scale(1);}}
+.mobile-links{display:flex;flex-direction:column;gap:.5rem;}
+.mobile-links a{font-family:'League Spartan',sans-serif;font-size:1.1rem;letter-spacing:.1em;text-transform:uppercase;color:var(--cream);text-decoration:none;padding:.85rem 1rem;border:1px solid transparent;border-radius:4px;transition:all .25s;}
+.mobile-links a:hover,.mobile-links a.active{border-color:rgba(61,99,68,.3);background:rgba(61,99,68,.1);color:var(--red);}
+.mobile-ctas{display:flex;flex-direction:column;gap:.75rem;}
+.mobile-cta-outline{display:block;width:100%;text-align:center;font-family:'League Spartan',sans-serif;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;padding:.85rem;color:var(--cream);border:1px solid rgba(247,218,159,.3);transition:all .3s;}
+.mobile-cta-outline:hover{border-color:var(--red);color:var(--red);}
+.mobile-cta-primary{display:block;width:100%;text-align:center;font-family:'League Spartan',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.85rem;color:#fff;background:var(--red);transition:background .3s;clip-path:polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,6px 100%,0 calc(100% - 6px));}
+.mobile-cta-primary:hover{background:#d42a1c;}
+
+/* ── HERO ── */
+.terapias-hero{
+  min-height:52vh;display:flex;align-items:center;
+  padding:130px 2rem 80px;position:relative;overflow:hidden;
+  background:radial-gradient(ellipse 90% 60% at 50% 0%,rgba(123,94,167,.12) 0%,rgba(201,168,76,.06) 50%,transparent 70%);
+  border-bottom:1px solid rgba(247,218,159,.08);
+}
+.hero-deco{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+.hero-deco-svg{position:absolute;opacity:.06;}
+.hero-inner{text-align:center;max-width:760px;margin:0 auto;position:relative;z-index:1;}
+.hero-eyebrow{font-family:'League Spartan',sans-serif;font-size:.65rem;letter-spacing:.4em;text-transform:uppercase;color:var(--green);display:block;margin-bottom:18px;}
+.terapias-hero h1{font-size:clamp(3rem,9vw,6rem);font-weight:900;line-height:.95;margin-bottom:24px;}
+.terapias-hero h1 .acc-tarot{color:var(--tarot);}
+.terapias-hero p{font-size:clamp(1rem,2.5vw,1.2rem);line-height:1.8;color:var(--cream-dim);margin-bottom:48px;max-width:560px;margin-left:auto;margin-right:auto;}
+
+/* Therapy quick-nav in hero */
+.therapy-nav{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.therapy-nav-link{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'League Spartan',sans-serif;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
+  padding:.55rem 1.1rem;border-radius:9999px;
+  border:1px solid rgba(247,218,159,.18);
+  color:var(--cream-dim);transition:all .25s;
+}
+.therapy-nav-link:hover{color:var(--cream);transform:translateY(-2px);}
+.tnl-tarot{border-color:rgba(201,168,76,.3);}
+.tnl-tarot:hover{border-color:var(--tarot);background:var(--tarot-dim);color:var(--tarot);}
+.tnl-psico{border-color:rgba(123,94,167,.3);}
+.tnl-psico:hover{border-color:var(--psico);background:var(--psico-dim);color:var(--psico);}
+.tnl-cortes{border-color:rgba(178,34,34,.3);}
+.tnl-cortes:hover{border-color:var(--cortes);background:var(--cortes-dim);color:var(--cortes);}
+.tnl-astral{border-color:rgba(65,105,225,.3);}
+.tnl-astral:hover{border-color:var(--astral);background:var(--astral-dim);color:var(--astral);}
+
+/* ── SERVICE LAYOUT ── */
+.service{position:relative;overflow:hidden;}
+.service-grid{display:flex;min-height:600px;align-items:stretch;}
+.service.reverse .service-visual{order:2;}
+.service.reverse .service-content{order:1;}
+
+.service-visual{
+  flex:0 0 44%;position:relative;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.service-content{
+  flex:1;display:flex;flex-direction:column;
+  justify-content:center;padding:72px 60px;
+}
+
+.service-num{
+  font-family:'League Spartan',sans-serif;font-size:.6rem;letter-spacing:.4em;
+  text-transform:uppercase;color:var(--cream-faint);display:block;margin-bottom:12px;
+}
+.service-title{
+  font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:900;
+  line-height:1;margin-bottom:20px;
+}
+.service-desc{
+  font-size:1.05rem;line-height:1.85;color:var(--cream-dim);margin-bottom:28px;
+}
+.service-includes{list-style:none;margin-bottom:32px;}
+.service-includes li{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:.95rem;color:var(--cream-dim);margin-bottom:10px;line-height:1.6;
+}
+.inc-dot{
+  flex-shrink:0;width:5px;height:5px;border-radius:50%;margin-top:8px;
+}
+
+/* ── PRICING CARDS ── */
+.pricing-wrap{display:flex;gap:14px;margin-bottom:36px;flex-wrap:wrap;}
+.price-card{
+  flex:1;min-width:160px;
+  padding:18px 20px;border-radius:6px;
+  border:1px solid;
+  transition:box-shadow .3s,transform .3s;
+}
+.price-card:hover{transform:translateY(-3px);}
+.price-label{
+  font-family:'League Spartan',sans-serif;font-size:.58rem;letter-spacing:.18em;
+  text-transform:uppercase;display:block;margin-bottom:8px;opacity:.7;
+}
+.price-value{
+  font-family:'League Spartan',sans-serif;font-size:1.3rem;font-weight:700;
+}
+
+/* ── CTA BUTTONS (clip-path style matching main site) ── */
+.service-cta{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'League Spartan',sans-serif;font-size:.76rem;
+  font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  padding:.9rem 2.2rem;cursor:pointer;
+  clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px));
+  transition:all .3s;align-self:flex-start;
+  border:none;
+}
+.service-cta svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;flex-shrink:0;transition:transform .3s;}
+.service-cta:hover svg{transform:translateX(4px);}
+
+/* ── 1. TARÔ ── */
+#tarot{background:linear-gradient(180deg,#080808 0%,#0e0b02 100%);}
+/* Subtle constellation starfield */
+.tarot-visual{
+  background:
+    radial-gradient(1.5px 1.5px at 12% 18%,rgba(201,168,76,.7) 0%,transparent 100%),
+    radial-gradient(1px 1px at 35% 72%,rgba(247,218,159,.5) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 58% 8%,rgba(201,168,76,.6) 0%,transparent 100%),
+    radial-gradient(1px 1px at 80% 55%,rgba(247,218,159,.4) 0%,transparent 100%),
+    radial-gradient(1px 1px at 22% 90%,rgba(201,168,76,.5) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 92% 25%,rgba(247,218,159,.6) 0%,transparent 100%),
+    radial-gradient(1px 1px at 48% 45%,rgba(201,168,76,.4) 0%,transparent 100%),
+    radial-gradient(1px 1px at 70% 88%,rgba(247,218,159,.3) 0%,transparent 100%),
+    radial-gradient(1px 1px at 5% 50%,rgba(201,168,76,.4) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 65% 28%,rgba(247,218,159,.5) 0%,transparent 100%),
+    radial-gradient(1px 1px at 88% 78%,rgba(201,168,76,.3) 0%,transparent 100%),
+    radial-gradient(1px 1px at 30% 42%,rgba(247,218,159,.3) 0%,transparent 100%),
+    radial-gradient(ellipse 70% 70% at 50% 50%,rgba(201,168,76,.07) 0%,transparent 60%),
+    #080808;
+  border-right:1px solid rgba(201,168,76,.1);
+}
+/* Tarot card flip */
+.tarot-flip{perspective:1200px;width:210px;height:340px;}
+.tarot-inner{
+  width:100%;height:100%;position:relative;
+  transform-style:preserve-3d;
+  transform:rotateY(180deg);
+  transition:transform 1.1s cubic-bezier(.25,.46,.45,.94);
+}
+.tarot-inner.flipped{transform:rotateY(0deg);}
+.tarot-face{
+  position:absolute;inset:0;
+  backface-visibility:hidden;-webkit-backface-visibility:hidden;
+  border-radius:10px;
+  border:1px solid rgba(201,168,76,.4);
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.tarot-back{
+  transform:rotateY(180deg);
+  background:linear-gradient(160deg,#0e0a00,#1c1400);
+}
+.tarot-front{
+  background:linear-gradient(160deg,#100d00,#1a1500);
+}
+
+/* Tarot accent color */
+.tarot-num{color:var(--tarot);}
+.tarot-title{color:var(--tarot);}
+.tarot-dot{background:var(--tarot);}
+.tarot-price{border-color:rgba(201,168,76,.3);background:var(--tarot-dim);}
+.tarot-price .price-label{color:var(--tarot);}
+.tarot-price .price-value{color:var(--tarot);}
+.tarot-price:hover{box-shadow:0 0 24px var(--tarot-glow);}
+.tarot-cta{background:var(--tarot);color:#080808;}
+.tarot-cta:hover{background:#e5c26a;box-shadow:0 12px 35px var(--tarot-glow);}
+#tarot .service-divider{background:linear-gradient(90deg,transparent,rgba(201,168,76,.25),transparent);}
+
+/* ── 2. PSICOTERAPIA ── */
+#psicoterapia{background:linear-gradient(180deg,#090510 0%,#080808 100%);border-top:1px solid rgba(123,94,167,.12);}
+.psico-visual{
+  background:radial-gradient(ellipse 80% 80% at 50% 50%,rgba(123,94,167,.18) 0%,rgba(8,8,8,.95) 70%);
+  border-left:1px solid rgba(123,94,167,.1);
+  border-right:none;
+}
+/* Pulsing glow border applied to the visual panel */
+@keyframes breatheGlow{
+  0%,100%{box-shadow:inset 0 0 30px rgba(123,94,167,.08),0 0 0 1px rgba(123,94,167,.15);}
+  50%{box-shadow:inset 0 0 60px rgba(123,94,167,.2),0 0 40px rgba(123,94,167,.3),0 0 80px rgba(123,94,167,.12);}
+}
+.psico-visual{animation:breatheGlow 5s ease-in-out infinite;}
+
+.psico-num{color:var(--psico);}
+.psico-title{color:var(--psico);}
+.psico-dot{background:var(--psico);}
+.psico-price{border-color:rgba(123,94,167,.3);background:var(--psico-dim);}
+.psico-price .price-label{color:var(--psico);}
+.psico-price .price-value{color:var(--psico);}
+.psico-price:hover{box-shadow:0 0 24px var(--psico-glow);}
+.psico-cta{background:var(--psico);color:#fff;}
+.psico-cta:hover{background:#9070c0;box-shadow:0 12px 35px var(--psico-glow);}
+
+/* ── 3. CORTES ENERGÉTICOS ── */
+#cortes{background:#050101;border-top:1px solid rgba(178,34,34,.12);}
+.cortes-visual{
+  background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(178,34,34,.12) 0%,#050101 70%);
+  border-right:1px solid rgba(178,34,34,.1);
+  position:relative;
+}
+/* Glowing red horizontal line through visual */
+.cortes-visual::after{
+  content:'';position:absolute;
+  left:0;right:0;top:50%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(178,34,34,.8),transparent);
+  box-shadow:0 0 8px rgba(178,34,34,.9),0 0 20px rgba(178,34,34,.4),0 0 40px rgba(178,34,34,.2);
+}
+/* Ember particles (CSS only) */
+@keyframes ember{0%{opacity:0;transform:translate(0,0) scale(1);}40%{opacity:1;}100%{opacity:0;transform:translate(var(--ex),var(--ey)) scale(.2);}}
+.ember{position:absolute;width:3px;height:3px;border-radius:50%;background:#B22222;box-shadow:0 0 4px #B22222;animation:ember 3s ease-out infinite;}
+.ember:nth-child(1){left:20%;top:52%;animation-delay:0s;  --ex:6px; --ey:-40px;}
+.ember:nth-child(2){left:50%;top:50%;animation-delay:.8s; --ex:-4px;--ey:-55px;}
+.ember:nth-child(3){left:75%;top:52%;animation-delay:1.6s;--ex:8px; --ey:-45px;}
+.ember:nth-child(4){left:35%;top:49%;animation-delay:2.2s;--ex:-6px;--ey:-35px;}
+.ember:nth-child(5){left:62%;top:51%;animation-delay:.4s; --ex:5px; --ey:-50px;}
+
+/* Clip-path reveal on content */
+/* cortes-reveal: removed clip-path trick — use standard .reveal fade-in instead */
+
+.cortes-num{color:var(--cortes);}
+.cortes-title{color:var(--cortes);}
+.cortes-dot{background:var(--cortes);}
+.cortes-price{border-color:rgba(178,34,34,.3);background:var(--cortes-dim);}
+.cortes-price .price-label{color:var(--cortes);}
+.cortes-price .price-value{color:var(--cortes);}
+.cortes-price:hover{box-shadow:0 0 24px var(--cortes-glow);}
+.cortes-cta{background:var(--cortes);color:#fff;}
+.cortes-cta:hover{background:#cc2828;box-shadow:0 12px 35px var(--cortes-glow);}
+
+/* ── 4. MAPAS ASTRAIS ── */
+#astral{background:linear-gradient(180deg,#010612 0%,#080808 100%);border-top:1px solid rgba(65,105,225,.12);}
+.astral-visual{
+  background:
+    radial-gradient(1px 1px at 15% 20%,rgba(100,149,237,.6) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 40% 75%,rgba(65,105,225,.7) 0%,transparent 100%),
+    radial-gradient(1px 1px at 70% 12%,rgba(173,216,230,.5) 0%,transparent 100%),
+    radial-gradient(1px 1px at 85% 60%,rgba(100,149,237,.4) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 25% 48%,rgba(65,105,225,.5) 0%,transparent 100%),
+    radial-gradient(1px 1px at 55% 88%,rgba(173,216,230,.4) 0%,transparent 100%),
+    radial-gradient(1px 1px at 90% 35%,rgba(100,149,237,.5) 0%,transparent 100%),
+    radial-gradient(1px 1px at 8% 82%,rgba(65,105,225,.4) 0%,transparent 100%),
+    radial-gradient(ellipse 70% 70% at 50% 50%,rgba(65,105,225,.1) 0%,transparent 60%),
+    #010612;
+  border-left:1px solid rgba(65,105,225,.1);
+  border-right:none;
+}
+/* Orbit animation */
+@keyframes orbitSpin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.orbit-g-outer{
+  transform-box:fill-box;transform-origin:center;
+  animation:orbitSpin 40s linear infinite;
+}
+.orbit-g-inner{
+  transform-box:fill-box;transform-origin:center;
+  animation:orbitSpin 18s linear infinite reverse;
+}
+.orbit-g-mid{
+  transform-box:fill-box;transform-origin:center;
+  animation:orbitSpin 26s linear infinite;
+}
+
+.astral-num{color:var(--astral);}
+.astral-title{color:var(--astral);}
+.astral-dot{background:var(--astral);}
+.astral-price{border-color:rgba(65,105,225,.3);background:var(--astral-dim);}
+.astral-price .price-label{color:var(--astral);}
+.astral-price .price-value{color:var(--astral);}
+.astral-price:hover{box-shadow:0 0 24px var(--astral-glow);}
+.astral-cta{background:var(--astral);color:#fff;}
+.astral-cta:hover{background:#5a7ef5;box-shadow:0 12px 35px var(--astral-glow);}
+
+/* ── SECTION DIVIDERS ── */
+.svc-divider{height:1px;width:100%;opacity:.6;}
+
+/* ── SHARED REVEAL (same pattern as site) ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+/* ── FOOTER (same pattern as rest of site) ── */
+footer{background:#040404;padding:4.5rem 2rem 2rem;border-top:1px solid rgba(61,99,68,.25);}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;max-width:1200px;margin:0 auto 3rem;}
+.foot-brand img{width:80px;height:80px;border-radius:50%;margin-bottom:1rem;border:1px solid rgba(61,99,68,.4);filter:drop-shadow(0 0 16px rgba(252,56,41,.2));}
+.foot-brand-name{font-family:'League Spartan',sans-serif;font-size:1rem;letter-spacing:.12em;color:var(--cream);}
+.foot-brand-sub{font-family:'League Spartan',sans-serif;font-size:.62rem;letter-spacing:.24em;color:var(--red);margin-bottom:1rem;}
+.foot-brand p{font-size:.88rem;color:var(--cream-faint);line-height:1.72;margin-bottom:1.5rem;}
+.socials{display:flex;gap:.6rem;}
+.soc{width:34px;height:34px;border:1px solid rgba(61,99,68,.35);display:flex;align-items:center;justify-content:center;color:var(--cream-dim);text-decoration:none;transition:all .3s;}
+.soc:hover{border-color:var(--red);color:var(--red);background:rgba(252,56,41,.08);}
+.foot-col h4{font-size:.7rem;letter-spacing:.22em;color:var(--cream);margin-bottom:1.4rem;padding-bottom:.7rem;border-bottom:1px solid rgba(61,99,68,.25);}
+.foot-links{list-style:none;display:flex;flex-direction:column;gap:.7rem;}
+.foot-links a{color:var(--cream-faint);text-decoration:none;font-size:.9rem;font-style:italic;transition:color .3s;}
+.foot-links a:hover{color:var(--red);}
+.foot-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid rgba(61,99,68,.18);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.foot-bottom p{font-size:.75rem;color:var(--cream-faint);font-family:'League Spartan',sans-serif;letter-spacing:.06em;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .service-content{padding:52px 40px;}
+  .foot-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  nav{padding:.9rem 1.2rem;}
+  .nav-desktop{display:none;}
+  .menu-toggle{display:flex;}
+  .service-grid{flex-direction:column;}
+  .service.reverse .service-visual,.service.reverse .service-content{order:unset;}
+  .service-visual{flex:none;min-height:280px;width:100%;}
+  .service-content{padding:40px 24px;}
+  .pricing-wrap{flex-direction:column;}
+  .therapy-nav{gap:8px;}
+  .foot-grid{grid-template-columns:1fr;}
+  .foot-bottom{flex-direction:column;text-align:center;}
+  .tarot-visual{border-right:none;border-bottom:1px solid rgba(201,168,76,.1);}
+  .psico-visual{border-left:none;border-bottom:1px solid rgba(123,94,167,.1);}
+  .cortes-visual{border-right:none;border-bottom:1px solid rgba(178,34,34,.1);}
+  .astral-visual{border-left:none;border-bottom:1px solid rgba(65,105,225,.1);}
+}
+@media(max-width:480px){
+  .terapias-hero h1{font-size:2.6rem;}
+  .service-title{font-size:1.8rem;}
+  .therapy-nav{justify-content:center;}
+  .service-cta{font-size:.68rem;padding:.8rem 1.6rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<header id="site-header">
+  <nav id="nav">
+    <a href="index.html" class="nav-brand">
+      <img src="logo encruzilhadas main.png" alt="Logo Encruzilhadas do Saber">
+      <div class="nav-brand-text">Encruzilhadas<em>do Saber</em></div>
+    </a>
+    <div class="nav-desktop">
+      <ul class="slide-nav" id="slideNav">
+        <li class="slide-tab"><a href="index.html#terreiro">Terreiro</a></li>
+        <li class="slide-tab"><a href="blog.html">Blog</a></li>
+        <li class="slide-tab active"><a href="terapias.html">Terapias</a></li>
+        <li class="slide-tab"><a href="index.html#comunidade">Comunidade</a></li>
+        <li class="slide-tab"><a href="index.html#produtos">Loja</a></li>
+        <li class="slide-cursor" id="slideCursor" aria-hidden="true"></li>
+      </ul>
+      <a href="index.html#newsletter" class="nav-cta-btn">Entrar</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+      <svg class="menu-icon" id="menuIcon" viewBox="0 0 32 32">
+        <path class="menu-path-top" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"/>
+        <path d="M7 16 27 16"/>
+      </svg>
+    </button>
+  </nav>
+  <div class="mobile-panel" id="mobilePanel">
+    <div class="mobile-panel-inner">
+      <div class="mobile-links">
+        <a href="index.html#terreiro">Terreiro</a>
+        <a href="blog.html">Blog</a>
+        <a href="terapias.html" class="active">Terapias</a>
+        <a href="index.html#comunidade">Comunidade</a>
+        <a href="index.html#produtos">Loja</a>
+      </div>
+      <div class="mobile-ctas">
+        <a href="index.html#newsletter" class="mobile-cta-outline">Entrar</a>
+        <a href="index.html" class="mobile-cta-primary">Voltar ao Site</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section class="terapias-hero">
+  <div class="hero-deco" aria-hidden="true">
+    <svg class="hero-deco-svg" style="top:-80px;left:-100px;width:420px;height:420px;" viewBox="0 0 300 300" fill="none">
+      <circle cx="150" cy="150" r="130" stroke="#C9A84C" stroke-width=".8"/>
+      <circle cx="150" cy="150" r="90"  stroke="#7B5EA7" stroke-width=".6"/>
+      <circle cx="150" cy="150" r="55"  stroke="#B22222" stroke-width=".5"/>
+      <polygon points="150,20 175,115 268,115 195,172 221,265 150,208 79,265 105,172 32,115 125,115" stroke="#4169E1" stroke-width=".5" fill="none"/>
+    </svg>
+    <svg class="hero-deco-svg" style="bottom:-80px;right:-100px;width:380px;height:380px;transform:rotate(120deg);" viewBox="0 0 300 300" fill="none">
+      <circle cx="150" cy="150" r="120" stroke="#7B5EA7" stroke-width=".8"/>
+      <circle cx="150" cy="150" r="80"  stroke="#C9A84C" stroke-width=".5"/>
+      <polygon points="150,30 172,112 255,112 188,160 213,242 150,195 87,242 112,160 45,112 128,112" stroke="#B22222" stroke-width=".5" fill="none"/>
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <span class="hero-eyebrow">✦ Cura &amp; Transformação ✦</span>
+    <h1>Tera<span class="acc-tarot">pias</span></h1>
+    <p>Quatro caminhos de cura para quem busca transformação — do Tarô aos rituais sagrados, da psique à vastidão do cosmos.</p>
+    <nav class="therapy-nav" aria-label="Navegar para terapia">
+      <a href="#tarot"       class="therapy-nav-link tnl-tarot"  aria-label="Ir para Leitura de Tarô">🃏 Leitura de Tarô</a>
+      <a href="#psicoterapia" class="therapy-nav-link tnl-psico" aria-label="Ir para Psicoterapia Holística">🌸 Psicoterapia Holística</a>
+      <a href="#cortes"      class="therapy-nav-link tnl-cortes" aria-label="Ir para Cortes Energéticos">⚡ Cortes Energéticos</a>
+      <a href="#astral"      class="therapy-nav-link tnl-astral" aria-label="Ir para Mapas Astrais">✦ Mapas Astrais</a>
+    </nav>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     1. LEITURA DE TARÔ
+══════════════════════════════════════════ -->
+<section class="service" id="tarot">
+  <div class="service-grid">
+
+    <!-- Visual: starfield + tarot card flip -->
+    <div class="service-visual tarot-visual" aria-hidden="true">
+      <div class="tarot-flip" id="tarotFlip">
+        <div class="tarot-inner" id="tarotCardInner">
+
+          <!-- Card BACK (shown first — mysterious back pattern) -->
+          <div class="tarot-face tarot-back">
+            <svg width="210" height="340" viewBox="0 0 210 340" fill="none" aria-label="Verso do tarô" role="img">
+              <rect x="1" y="1" width="208" height="338" rx="9" stroke="rgba(201,168,76,.5)" stroke-width="1"/>
+              <rect x="10" y="10" width="190" height="320" rx="7" stroke="rgba(201,168,76,.25)" stroke-width=".7"/>
+              <!-- Celtic cross pattern -->
+              <line x1="105" y1="20" x2="105" y2="320" stroke="rgba(201,168,76,.2)" stroke-width=".7"/>
+              <line x1="20"  y1="170" x2="190" y2="170" stroke="rgba(201,168,76,.2)" stroke-width=".7"/>
+              <circle cx="105" cy="170" r="60" stroke="rgba(201,168,76,.2)" stroke-width=".7"/>
+              <circle cx="105" cy="170" r="35" stroke="rgba(201,168,76,.3)" stroke-width=".8"/>
+              <circle cx="105" cy="170" r="12" stroke="rgba(201,168,76,.5)" stroke-width="1"/>
+              <!-- Star corners -->
+              <polygon points="25,25 30,40 45,40 33,50 38,65 25,55 12,65 17,50 5,40 20,40" stroke="rgba(201,168,76,.35)" stroke-width=".6" fill="none"/>
+              <polygon points="185,25 190,40 205,40 193,50 198,65 185,55 172,65 177,50 165,40 180,40" stroke="rgba(201,168,76,.35)" stroke-width=".6" fill="none"/>
+              <polygon points="25,315 30,300 45,300 33,290 38,275 25,285 12,275 17,290 5,300 20,300" stroke="rgba(201,168,76,.35)" stroke-width=".6" fill="none"/>
+              <polygon points="185,315 190,300 205,300 193,290 198,275 185,285 172,275 177,290 165,300 180,300" stroke="rgba(201,168,76,.35)" stroke-width=".6" fill="none"/>
+              <!-- Diamond chain border -->
+              <path d="M18 85 L25 92 L18 99 L11 92 Z M18 99 L25 106 L18 113 L11 106 Z" stroke="rgba(201,168,76,.2)" stroke-width=".5" fill="none"/>
+              <path d="M192 85 L199 92 L192 99 L185 92 Z M192 99 L199 106 L192 113 L185 106 Z" stroke="rgba(201,168,76,.2)" stroke-width=".5" fill="none"/>
+              <!-- Center text -->
+              <text x="105" y="336" text-anchor="middle" font-family="serif" font-size="8" fill="rgba(201,168,76,.4)" letter-spacing="4">ENCRUZILHADAS</text>
+            </svg>
+          </div>
+
+          <!-- Card FRONT (revealed after flip) -->
+          <div class="tarot-face tarot-front">
+            <svg width="210" height="340" viewBox="0 0 210 340" fill="none" aria-label="Carta do Tarô com olho sagrado" role="img">
+              <rect x="1" y="1" width="208" height="338" rx="9" stroke="rgba(201,168,76,.6)" stroke-width="1.2"/>
+              <rect x="10" y="10" width="190" height="320" rx="7" stroke="rgba(201,168,76,.2)" stroke-width=".6"/>
+              <!-- Moon phase top -->
+              <path d="M75 55 Q105 30 135 55 Q120 70 105 72 Q90 70 75 55Z" stroke="#C9A84C" stroke-width="1.2" fill="none"/>
+              <circle cx="105" cy="57" r="14" stroke="#C9A84C" stroke-width="1"/>
+              <!-- Eye body (almond) -->
+              <path d="M25 170 Q105 100 185 170 Q105 240 25 170Z" stroke="#C9A84C" stroke-width="1.5" fill="none"/>
+              <!-- Iris -->
+              <circle cx="105" cy="170" r="36" stroke="#C9A84C" stroke-width="1.2"/>
+              <!-- Pupil -->
+              <circle cx="105" cy="170" r="16" fill="rgba(201,168,76,.3)" stroke="#C9A84C" stroke-width="1"/>
+              <circle cx="105" cy="170" r="5" fill="#C9A84C"/>
+              <!-- Eyelash rays -->
+              <line x1="105" y1="116" x2="105" y2="104" stroke="#C9A84C" stroke-width=".8"/>
+              <line x1="105" y1="224" x2="105" y2="236" stroke="#C9A84C" stroke-width=".8"/>
+              <line x1="68"  y1="128" x2="59"  y2="120" stroke="#C9A84C" stroke-width=".6"/>
+              <line x1="142" y1="128" x2="151" y2="120" stroke="#C9A84C" stroke-width=".6"/>
+              <line x1="68"  y1="212" x2="59"  y2="220" stroke="#C9A84C" stroke-width=".6"/>
+              <line x1="142" y1="212" x2="151" y2="220" stroke="#C9A84C" stroke-width=".6"/>
+              <!-- Stars below -->
+              <path d="M55 280 L59 292 L71 292 L62 300 L65 312 L55 304 L45 312 L48 300 L39 292 L51 292Z" stroke="rgba(201,168,76,.5)" stroke-width=".7" fill="none"/>
+              <path d="M155 280 L159 292 L171 292 L162 300 L165 312 L155 304 L145 312 L148 300 L139 292 L151 292Z" stroke="rgba(201,168,76,.5)" stroke-width=".7" fill="none"/>
+              <!-- Card name -->
+              <text x="105" y="260" text-anchor="middle" font-family="League Spartan, sans-serif" font-size="9" fill="rgba(201,168,76,.7)" letter-spacing="5" text-transform="uppercase">O OLHAR</text>
+              <text x="105" y="336" text-anchor="middle" font-family="serif" font-size="8" fill="rgba(201,168,76,.4)" letter-spacing="4">ENCRUZILHADAS</text>
+            </svg>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="service-content reveal">
+      <span class="service-num tarot-num">01 / Tarô</span>
+      <h2 class="service-title tarot-title">Leitura de Tarô</h2>
+      <p class="service-desc">
+        Uma leitura profunda para iluminar o que está oculto. O Tarô não prevê o futuro — ele revela os caminhos que você já carrega dentro de si.
+      </p>
+      <ul class="service-includes" aria-label="O que está incluído">
+        <li>
+          <span class="inc-dot tarot-dot" aria-hidden="true"></span>
+          Leitura completa de 1h via videochamada
+        </li>
+        <li>
+          <span class="inc-dot tarot-dot" aria-hidden="true"></span>
+          Gravação da sessão disponível para você rever
+        </li>
+        <li>
+          <span class="inc-dot tarot-dot" aria-hidden="true"></span>
+          Resumo por escrito entregue após a sessão
+        </li>
+      </ul>
+      <div class="pricing-wrap" aria-label="Preços">
+        <div class="price-card tarot-price">
+          <span class="price-label">Sessão Avulsa</span>
+          <span class="price-value" data-preco="tarot.sessaoAvulsa">R$ [PLACEHOLDER]</span>
+        </div>
+        <div class="price-card tarot-price">
+          <span class="price-label">Pacote 3 Sessões</span>
+          <span class="price-value" data-preco="tarot.pacote3Sessoes">R$ [PLACEHOLDER]</span>
+        </div>
+      </div>
+      <a href="#"
+         class="service-cta tarot-cta"
+         data-wa="Olá! Tenho interesse em agendar uma Leitura de Tarô."
+         aria-label="Agendar Leitura de Tarô pelo WhatsApp">
+        Agendar Leitura
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<div class="svc-divider" style="background:linear-gradient(90deg,transparent,rgba(123,94,167,.3),transparent);" aria-hidden="true"></div>
+
+<!-- ══════════════════════════════════════════
+     2. PSICOTERAPIA HOLÍSTICA
+══════════════════════════════════════════ -->
+<section class="service reverse" id="psicoterapia">
+  <div class="service-grid">
+
+    <!-- Visual: lotus SVG + pulsing glow (animation on .psico-visual via CSS) -->
+    <div class="service-visual psico-visual" aria-hidden="true">
+      <svg width="260" height="260" viewBox="0 0 260 260" fill="none" aria-label="Lótus sagrada" role="img">
+        <!-- Outer decorative circle -->
+        <circle cx="130" cy="130" r="118" stroke="rgba(123,94,167,.15)" stroke-width=".8" stroke-dasharray="4 8"/>
+        <circle cx="130" cy="130" r="96"  stroke="rgba(123,94,167,.12)" stroke-width=".6"/>
+        <!-- Lotus petals — outer ring -->
+        <path d="M130 148 Q100 118 108 78 Q130 108 130 148Z" stroke="#7B5EA7" stroke-width="1.2" fill="rgba(123,94,167,.06)"/>
+        <path d="M130 148 Q160 118 152 78 Q130 108 130 148Z" stroke="#7B5EA7" stroke-width="1.2" fill="rgba(123,94,167,.06)"/>
+        <path d="M130 148 Q90  128 74  92  Q110 118 130 148Z" stroke="#7B5EA7" stroke-width="1"   fill="rgba(123,94,167,.04)"/>
+        <path d="M130 148 Q170 128 186 92  Q150 118 130 148Z" stroke="#7B5EA7" stroke-width="1"   fill="rgba(123,94,167,.04)"/>
+        <path d="M130 148 Q86  150 78  114 Q112 134 130 148Z" stroke="#7B5EA7" stroke-width=".8" fill="rgba(123,94,167,.03)"/>
+        <path d="M130 148 Q174 150 182 114 Q148 134 130 148Z" stroke="#7B5EA7" stroke-width=".8" fill="rgba(123,94,167,.03)"/>
+        <!-- Center inner petals -->
+        <path d="M130 148 Q115 130 122 110 Q130 128 130 148Z" stroke="#9070C0" stroke-width="1" fill="rgba(144,112,192,.08)"/>
+        <path d="M130 148 Q145 130 138 110 Q130 128 130 148Z" stroke="#9070C0" stroke-width="1" fill="rgba(144,112,192,.08)"/>
+        <!-- Center circle -->
+        <circle cx="130" cy="138" r="16" stroke="#7B5EA7" stroke-width="1.2"/>
+        <circle cx="130" cy="138" r="6"  fill="rgba(123,94,167,.5)"/>
+        <!-- Stem -->
+        <line x1="130" y1="154" x2="130" y2="200" stroke="#7B5EA7" stroke-width="1.2"/>
+        <!-- Water surface -->
+        <path d="M88 200 Q109 192 130 200 Q151 208 172 200" stroke="rgba(123,94,167,.5)" stroke-width="1" fill="none"/>
+        <path d="M82 206 Q106 198 130 206 Q154 214 178 206" stroke="rgba(123,94,167,.25)" stroke-width=".6" fill="none"/>
+        <!-- Shimmer dots -->
+        <circle cx="130" cy="56" r="2" fill="rgba(144,112,192,.6)"/>
+        <circle cx="96"  cy="68" r="1.5" fill="rgba(123,94,167,.4)"/>
+        <circle cx="164" cy="68" r="1.5" fill="rgba(123,94,167,.4)"/>
+      </svg>
+    </div>
+
+    <!-- Content -->
+    <div class="service-content reveal">
+      <span class="service-num psico-num">02 / Psicoterapia</span>
+      <h2 class="service-title psico-title">Psicoterapia Holística</h2>
+      <p class="service-desc">
+        Uma abordagem integradora que une a psicologia profunda à dimensão espiritual do ser. Aqui, o inconsciente e a alma conversam — trabalhando crenças limitantes, traumas e padrões que se repetem, à luz do sagrado.
+      </p>
+      <ul class="service-includes" aria-label="O que está incluído">
+        <li>
+          <span class="inc-dot psico-dot" aria-hidden="true"></span>
+          Sessão individual de 50 min via videochamada ou presencial
+        </li>
+        <li>
+          <span class="inc-dot psico-dot" aria-hidden="true"></span>
+          Técnicas de terapia holística e análise transpessoal
+        </li>
+        <li>
+          <span class="inc-dot psico-dot" aria-hidden="true"></span>
+          Suporte entre sessões por mensagem de texto
+        </li>
+      </ul>
+      <div class="pricing-wrap" aria-label="Preços">
+        <div class="price-card psico-price">
+          <span class="price-label">Sessão Avulsa</span>
+          <span class="price-value" data-preco="psicoterapia.sessaoAvulsa">R$ [PLACEHOLDER]</span>
+        </div>
+        <div class="price-card psico-price">
+          <span class="price-label">Pacote Mensal (4 sessões)</span>
+          <span class="price-value" data-preco="psicoterapia.pacoteMensal">R$ [PLACEHOLDER]</span>
+        </div>
+      </div>
+      <a href="#"
+         class="service-cta psico-cta"
+         data-wa="Olá! Tenho interesse em agendar uma sessão de Psicoterapia Holística."
+         aria-label="Agendar sessão de Psicoterapia Holística pelo WhatsApp">
+        Agendar Consulta
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<div class="svc-divider" style="background:linear-gradient(90deg,transparent,rgba(178,34,34,.3),transparent);" aria-hidden="true"></div>
+
+<!-- ══════════════════════════════════════════
+     3. RITUAIS DE CORTES ENERGÉTICOS
+══════════════════════════════════════════ -->
+<section class="service" id="cortes">
+  <div class="service-grid">
+
+    <!-- Visual: scissors SVG + ember particles + glowing line (via CSS) -->
+    <div class="service-visual cortes-visual" aria-hidden="true">
+      <!-- Ember particles -->
+      <div class="ember" aria-hidden="true"></div>
+      <div class="ember" aria-hidden="true"></div>
+      <div class="ember" aria-hidden="true"></div>
+      <div class="ember" aria-hidden="true"></div>
+      <div class="ember" aria-hidden="true"></div>
+      <svg width="260" height="260" viewBox="0 0 260 260" fill="none" aria-label="Tesoura ritual — corte energético" role="img">
+        <!-- Outer ritual circle with dashes -->
+        <circle cx="130" cy="130" r="118" stroke="rgba(178,34,34,.3)" stroke-width=".8" stroke-dasharray="3 6"/>
+        <circle cx="130" cy="130" r="96"  stroke="rgba(178,34,34,.15)" stroke-width=".5"/>
+        <!-- Blade 1 (top-left to bottom-right) -->
+        <path d="M55 55 L205 205" stroke="#B22222" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M62 48 L212 198" stroke="rgba(178,34,34,.35)" stroke-width="1" stroke-linecap="round"/>
+        <!-- Blade 2 (top-right to bottom-left) -->
+        <path d="M205 55 L55 205" stroke="#B22222" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M212 48 L62 198" stroke="rgba(178,34,34,.35)" stroke-width="1" stroke-linecap="round"/>
+        <!-- Handle rings (bottom) -->
+        <circle cx="68"  cy="200" r="22" stroke="#B22222" stroke-width="1.5"/>
+        <circle cx="68"  cy="200" r="11" stroke="rgba(178,34,34,.4)" stroke-width=".8"/>
+        <circle cx="192" cy="200" r="22" stroke="#B22222" stroke-width="1.5"/>
+        <circle cx="192" cy="200" r="11" stroke="rgba(178,34,34,.4)" stroke-width=".8"/>
+        <!-- Pivot / center screw -->
+        <circle cx="130" cy="128" r="9" stroke="#B22222" stroke-width="1.5"/>
+        <circle cx="130" cy="128" r="3" fill="#B22222"/>
+        <!-- Energy glow around pivot -->
+        <circle cx="130" cy="128" r="20" stroke="rgba(178,34,34,.3)" stroke-width=".7" stroke-dasharray="2 4"/>
+        <!-- Handle tops (small circles) -->
+        <circle cx="66"  cy="56"  r="8"  stroke="rgba(178,34,34,.6)" stroke-width="1"/>
+        <circle cx="194" cy="56"  r="8"  stroke="rgba(178,34,34,.6)" stroke-width="1"/>
+        <!-- Chain links (broken) below handles -->
+        <path d="M56 228 Q68 220 80 228 Q68 236 56 228Z" stroke="rgba(178,34,34,.4)" stroke-width=".8" fill="none"/>
+        <path d="M180 228 Q192 220 204 228 Q192 236 180 228Z" stroke="rgba(178,34,34,.4)" stroke-width=".8" fill="none"/>
+        <!-- Broken chain center — gap indicating the cut -->
+        <path d="M108 225 Q120 218 128 225" stroke="rgba(178,34,34,.5)" stroke-width=".8" fill="none"/>
+        <path d="M132 225 Q140 218 152 225" stroke="rgba(178,34,34,.5)" stroke-width=".8" fill="none"/>
+      </svg>
+    </div>
+
+    <!-- Content -->
+    <div class="service-content reveal">
+      <span class="service-num cortes-num">03 / Rituais</span>
+      <h2 class="service-title cortes-title">Rituais de Cortes Energéticos</h2>
+      <p class="service-desc">
+        Alguns vínculos nos prendem além da compreensão racional. Os rituais de corte rompem ligações energéticas que drenam, limitam e aprisionam — com intenção, proteção e sagrado.
+      </p>
+      <ul class="service-includes" aria-label="O que está incluído">
+        <li>
+          <span class="inc-dot cortes-dot" aria-hidden="true"></span>
+          Avaliação energética prévia à distância
+        </li>
+        <li>
+          <span class="inc-dot cortes-dot" aria-hidden="true"></span>
+          Ritual conduzido remotamente ou presencialmente
+        </li>
+        <li>
+          <span class="inc-dot cortes-dot" aria-hidden="true"></span>
+          Orientações pós-ritual para fixação e proteção do corte
+        </li>
+      </ul>
+      <div class="pricing-wrap" aria-label="Preços">
+        <div class="price-card cortes-price">
+          <span class="price-label">Ritual Individual</span>
+          <span class="price-value" data-preco="cortes.ritualIndividual">R$ [PLACEHOLDER]</span>
+        </div>
+        <div class="price-card cortes-price">
+          <span class="price-label">Ritual + Acompanhamento 30 dias</span>
+          <span class="price-value" data-preco="cortes.ritualMais30Dias">R$ [PLACEHOLDER]</span>
+        </div>
+      </div>
+      <a href="#"
+         class="service-cta cortes-cta"
+         data-wa="Olá! Tenho interesse em realizar um Ritual de Corte Energético."
+         aria-label="Solicitar Ritual de Corte Energético pelo WhatsApp">
+        Solicitar Ritual
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<div class="svc-divider" style="background:linear-gradient(90deg,transparent,rgba(65,105,225,.3),transparent);" aria-hidden="true"></div>
+
+<!-- ══════════════════════════════════════════
+     4. MAPAS ASTRAIS
+══════════════════════════════════════════ -->
+<section class="service reverse" id="astral">
+  <div class="service-grid">
+
+    <!-- Visual: rotating zodiac/orbit SVG + star map background (via CSS) -->
+    <div class="service-visual astral-visual" aria-hidden="true">
+      <svg width="290" height="290" viewBox="0 0 290 290" fill="none" aria-label="Mapa astral com rodas zodiacais" role="img">
+        <!-- Rotating outer ring -->
+        <g class="orbit-g-outer">
+          <circle cx="145" cy="145" r="136" stroke="rgba(65,105,225,.4)" stroke-width="1" stroke-dasharray="2 8"/>
+          <!-- Planet dots on outer orbit -->
+          <circle cx="145" cy="9"   r="4" fill="#4169E1"/>
+          <circle cx="276" cy="80"  r="3" fill="rgba(65,105,225,.7)"/>
+          <circle cx="240" cy="266" r="3" fill="rgba(100,149,237,.6)"/>
+          <circle cx="30"  cy="190" r="3.5" fill="rgba(65,105,225,.8)"/>
+        </g>
+        <!-- Rotating middle ring -->
+        <g class="orbit-g-mid">
+          <circle cx="145" cy="145" r="108" stroke="rgba(65,105,225,.25)" stroke-width=".8" stroke-dasharray="1 5"/>
+          <!-- Zodiac division marks (12 houses) -->
+          <line x1="145" y1="37"  x2="145" y2="48"  stroke="rgba(65,105,225,.5)" stroke-width="1"/>
+          <line x1="199" y1="52"  x2="193" y2="62"  stroke="rgba(65,105,225,.4)" stroke-width=".8"/>
+          <line x1="237" y1="91"  x2="228" y2="97"  stroke="rgba(65,105,225,.4)" stroke-width=".8"/>
+          <line x1="253" y1="145" x2="242" y2="145" stroke="rgba(65,105,225,.5)" stroke-width="1"/>
+          <line x1="237" y1="199" x2="228" y2="193" stroke="rgba(65,105,225,.4)" stroke-width=".8"/>
+          <line x1="199" y1="238" x2="193" y2="228" stroke="rgba(65,105,225,.4)" stroke-width=".8"/>
+          <line x1="145" y1="253" x2="145" y2="242" stroke="rgba(65,105,225,.5)" stroke-width="1"/>
+          <line x1="91"  y1="238" x2="97"  y2="228" stroke="rgba(65,105,225,.4)" stroke-width=".8"/>
+          <line x1="53"  y1="199" x2="62"  y2="193" stroke="rgba(65,105,225,.4)" stroke-width=".8"/>
+          <line x1="37"  y1="145" x2="48"  y2="145" stroke="rgba(65,105,225,.5)" stroke-width="1"/>
+          <line x1="53"  y1="91"  x2="62"  y2="97"  stroke="rgba(65,105,225,.4)" stroke-width=".8"/>
+          <line x1="91"  y1="52"  x2="97"  y2="62"  stroke="rgba(65,105,225,.4)" stroke-width=".8"/>
+          <!-- Small planet dot -->
+          <circle cx="199" cy="52" r="2.5" fill="rgba(173,216,230,.6)"/>
+        </g>
+        <!-- Rotating inner ring -->
+        <g class="orbit-g-inner">
+          <circle cx="145" cy="145" r="78" stroke="rgba(65,105,225,.3)" stroke-width="1" stroke-dasharray="3 5"/>
+          <!-- Aspect lines (like a natal chart) -->
+          <line x1="145" y1="67"  x2="198" y2="183" stroke="rgba(65,105,225,.25)" stroke-width=".6"/>
+          <line x1="145" y1="67"  x2="92"  y2="183" stroke="rgba(65,105,225,.25)" stroke-width=".6"/>
+          <line x1="198" y1="183" x2="92"  y2="183" stroke="rgba(65,105,225,.2)"  stroke-width=".6"/>
+          <!-- Inner planet -->
+          <circle cx="145" cy="67" r="3" fill="#4169E1"/>
+          <circle cx="198" cy="183" r="2.5" fill="rgba(65,105,225,.7)"/>
+          <circle cx="92"  cy="183" r="2.5" fill="rgba(65,105,225,.7)"/>
+        </g>
+        <!-- Fixed: Cross lines (cardinal points) -->
+        <line x1="145" y1="20"  x2="145" y2="270" stroke="rgba(65,105,225,.15)" stroke-width=".6"/>
+        <line x1="20"  y1="145" x2="270" y2="145" stroke="rgba(65,105,225,.15)" stroke-width=".6"/>
+        <!-- Fixed: Inner astrolabe ring -->
+        <circle cx="145" cy="145" r="48" stroke="rgba(65,105,225,.35)" stroke-width="1"/>
+        <circle cx="145" cy="145" r="28" stroke="rgba(65,105,225,.25)" stroke-width=".8"/>
+        <!-- Fixed: Center glyph -->
+        <circle cx="145" cy="145" r="10" stroke="#4169E1" stroke-width="1.2"/>
+        <circle cx="145" cy="145" r="3"  fill="#4169E1"/>
+        <!-- Fixed: Glowing center halo -->
+        <circle cx="145" cy="145" r="14" stroke="rgba(65,105,225,.2)" stroke-width=".5" stroke-dasharray="2 3"/>
+      </svg>
+    </div>
+
+    <!-- Content -->
+    <div class="service-content reveal">
+      <span class="service-num astral-num">04 / Astrologia</span>
+      <h2 class="service-title astral-title">Mapas Astrais</h2>
+      <p class="service-desc">
+        Seu mapa astral é o retrato único do instante em que você chegou ao mundo. Uma análise profunda que revela talentos, desafios, padrões emocionais e missão de alma — com rigor e espiritualidade.
+      </p>
+      <ul class="service-includes" aria-label="O que está incluído">
+        <li>
+          <span class="inc-dot astral-dot" aria-hidden="true"></span>
+          Elaboração do mapa natal completo (natal e progredido)
+        </li>
+        <li>
+          <span class="inc-dot astral-dot" aria-hidden="true"></span>
+          Sessão de interpretação de 1h30 via videochamada
+        </li>
+        <li>
+          <span class="inc-dot astral-dot" aria-hidden="true"></span>
+          Documento detalhado com sínteses e orientações entregue por escrito
+        </li>
+      </ul>
+      <div class="pricing-wrap" aria-label="Preços">
+        <div class="price-card astral-price">
+          <span class="price-label">Sessão Avulsa</span>
+          <span class="price-value" data-preco="astral.sessaoAvulsa">R$ [PLACEHOLDER]</span>
+        </div>
+        <div class="price-card astral-price">
+          <span class="price-label">Pacote Tarô + Mapa Astral</span>
+          <span class="price-value" data-preco="astral.pacoteCombinado">R$ [PLACEHOLDER]</span>
+        </div>
+      </div>
+      <a href="#"
+         class="service-cta astral-cta"
+         data-wa="Olá! Tenho interesse em agendar uma sessão de Tarot + Mapa Astral."
+         aria-label="Agendar sessão de Mapa Astral pelo WhatsApp">
+        Agendar Sessão Completa
+        <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <img src="logo encruzilhadas main.png" alt="Logo Encruzilhadas do Saber">
+      <p class="foot-brand-name">Encruzilhadas</p>
+      <p class="foot-brand-sub">do Saber</p>
+      <p>Um espaço dedicado à preservação, ensino e celebração da espiritualidade afro-brasileira com amor, respeito e axé.</p>
+      <div class="socials">
+        <a href="#" class="soc" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" class="soc" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="3"/><polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" class="soc" aria-label="WhatsApp"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+        <a href="#" class="soc" aria-label="Telegram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg></a>
+      </div>
+    </div>
+    <div class="foot-col">
+      <h4>Navegue</h4>
+      <ul class="foot-links">
+        <li><a href="index.html#terreiro">Terreiro Online</a></li>
+        <li><a href="blog.html">Blog do Saber</a></li>
+        <li><a href="terapias.html">Terapias</a></li>
+        <li><a href="index.html#produtos">Loja</a></li>
+        <li><a href="index.html">Página Inicial</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Terapias</h4>
+      <ul class="foot-links">
+        <li><a href="#tarot">Leitura de Tarô</a></li>
+        <li><a href="#psicoterapia">Psicoterapia Holística</a></li>
+        <li><a href="#cortes">Cortes Energéticos</a></li>
+        <li><a href="#astral">Mapas Astrais</a></li>
+        <li><a href="quiz-umbanda.html">Quiz de Umbanda</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Ajuda</h4>
+      <ul class="foot-links">
+        <li><a href="#">Fale Conosco</a></li>
+        <li><a href="#">Perguntas Frequentes</a></li>
+        <li><a href="EncruzilhadasdoSaber_PrivacyPolicy_v1.html">Política de Privacidade</a></li>
+        <li><a href="EncruzilhadasdoSaber_PrivacyPolicy_v1.html">Termos de Uso</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <p>&copy; 2026 Encruzilhadas do Saber. Todos os direitos reservados.</p>
+    <p>Feito com ◆ Axé e Amor</p>
+  </div>
+</footer>
+
+<!-- Load config first so helpers are available -->
+<script src="config.js"></script>
+<script>
+// ── Nav: floating island on scroll ──
+var siteHeader = document.getElementById('site-header');
+var navEl      = document.getElementById('nav');
+window.addEventListener('scroll', function() {
+  var s = window.scrollY > 10;
+  siteHeader.classList.toggle('scrolled', s);
+  navEl.classList.toggle('scrolled', s);
+});
+
+// ── Nav: sliding pill cursor locked on active tab ──
+var slideNav    = document.getElementById('slideNav');
+var slideCursor = document.getElementById('slideCursor');
+var tabs        = slideNav.querySelectorAll('.slide-tab');
+var activeTab   = slideNav.querySelector('.slide-tab.active');
+
+function moveCursor(tab) {
+  slideCursor.style.left    = tab.offsetLeft + 'px';
+  slideCursor.style.width   = tab.offsetWidth + 'px';
+  slideCursor.style.opacity = '1';
+}
+if (activeTab) requestAnimationFrame(function(){ moveCursor(activeTab); });
+tabs.forEach(function(tab) {
+  tab.addEventListener('mouseenter', function(){ moveCursor(tab); });
+});
+slideNav.addEventListener('mouseleave', function(){
+  if (activeTab) moveCursor(activeTab);
+});
+
+// ── Mobile menu ──
+var menuOpen  = false;
+var menuToggle  = document.getElementById('menuToggle');
+var menuIcon    = document.getElementById('menuIcon');
+var mobilePanel = document.getElementById('mobilePanel');
+function setMenuOpen(open) {
+  menuOpen = open;
+  menuIcon.classList.toggle('open', open);
+  mobilePanel.classList.toggle('open', open);
+  menuToggle.setAttribute('aria-expanded', String(open));
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+menuToggle.addEventListener('click', function(){ setMenuOpen(!menuOpen); });
+mobilePanel.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click', function(){ setMenuOpen(false); });
+});
+
+// ── Tarot card flip on scroll-into-view ──
+var tarotFlip  = document.getElementById('tarotFlip');
+var tarotInner = document.getElementById('tarotCardInner');
+if (tarotFlip && tarotInner) {
+  var tarotObs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        setTimeout(function(){ tarotInner.classList.add('flipped'); }, 400);
+        tarotObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.4 });
+  tarotObs.observe(tarotFlip);
+}
+
+// ── General scroll reveal (same pattern as site) ──
+var reveals  = document.querySelectorAll('.reveal');
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry, i) {
+    if (entry.isIntersecting) {
+      setTimeout(function(){ entry.target.classList.add('in'); }, i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+reveals.forEach(function(el){ observer.observe(el); });
+</script>
+</body>
+</html>

@@ -125,9 +125,10 @@ nav.scrolled{
   font-family:'League Spartan',sans-serif;font-size:.72rem;
   letter-spacing:.14em;text-transform:uppercase;
   color:var(--cream);text-decoration:none;white-space:nowrap;
-  mix-blend-mode:difference;transition:color .01s;
+  transition:color .2s;
 }
-@media(min-width:768px){.slide-tab a{padding:.65rem 1.3rem;font-size:.76rem;}}
+.slide-tab a:hover{color:var(--red);}
+@media(min-width:768px){.slide-tab a{padding:.6rem 1.05rem;font-size:.72rem;}}
 
 .slide-cursor{
   position:absolute;z-index:0;top:4px;left:0;
@@ -594,7 +595,8 @@ footer{background:#040404;padding:4.5rem 2rem 2rem;border-top:1px solid rgba(61,
     <div class="nav-desktop">
       <ul class="slide-nav" id="slideNav">
         <li class="slide-tab"><a href="#terreiro">Terreiro</a></li>
-        <li class="slide-tab"><a href="#blog">Blog</a></li>
+        <li class="slide-tab"><a href="blog.html">Blog</a></li>
+        <li class="slide-tab"><a href="terapias.html">Terapias</a></li>
         <li class="slide-tab"><a href="#comunidade">Comunidade</a></li>
         <li class="slide-tab"><a href="#produtos">Loja</a></li>
         <li class="slide-cursor" id="slideCursor" aria-hidden="true"></li>
@@ -618,7 +620,8 @@ footer{background:#040404;padding:4.5rem 2rem 2rem;border-top:1px solid rgba(61,
     <div class="mobile-panel-inner">
       <div class="mobile-links">
         <a href="#terreiro">Terreiro</a>
-        <a href="#blog">Blog</a>
+        <a href="blog.html">Blog</a>
+        <a href="terapias.html">Terapias</a>
         <a href="#comunidade">Comunidade</a>
         <a href="#produtos">Loja</a>
       </div>
@@ -915,55 +918,56 @@ footer{background:#040404;padding:4.5rem 2rem 2rem;border-top:1px solid rgba(61,
       </div>
 
       <!-- Card 2 -->
-      <div class="pcard reveal">
+      <div class="pcard reveal" style="opacity:.85;">
         <div class="pcard-cover" style="background:linear-gradient(160deg,#2a0505,#6b1515);">
           <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.12" viewBox="0 0 200 270"><path d="M100 40 L160 200 L40 200 Z" stroke="#F7DA9F" stroke-width="1" fill="none"/><path d="M100 70 L145 190 L55 190 Z" stroke="#FC3829" stroke-width=".5" fill="none"/><circle cx="100" cy="145" r="28" stroke="#F7DA9F" stroke-width=".5" fill="none"/></svg>
           <div class="pcard-cover-inner">
             <span class="pcard-cover-sym">&#9670;</span>
             <span class="pcard-cover-ttl">Rituais das<br>Encruzilhadas</span>
           </div>
+          <span class="pcard-badge" style="background:rgba(247,218,159,.15);color:#F7DA9F;border:1px solid rgba(247,218,159,.3);">Em Breve</span>
         </div>
         <div class="pcard-body">
           <p class="pcard-type">E-book</p>
           <h3 class="pcard-name">Rituais das Encruzilhadas: Exu e Pombagira</h3>
-          <div class="pcard-price">R$ 37</div>
-          <button class="pcard-btn">Adquirir Agora</button>
+          <div class="pcard-price" style="color:rgba(247,218,159,.4);font-size:.9rem;">Em breve...</div>
+          <button class="pcard-btn" style="background:transparent;border:1px solid rgba(247,218,159,.3);color:#F7DA9F;" onclick="location.href='em-breve.html'">🔔 Quero ser avisado</button>
         </div>
       </div>
 
       <!-- Card 3 -->
-      <div class="pcard reveal">
+      <div class="pcard reveal" style="opacity:.85;">
         <div class="pcard-cover" style="background:linear-gradient(160deg,#0a1520,#1a3a55);">
           <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.12" viewBox="0 0 200 270"><path d="M100 40 C160 70 170 160 100 240 C30 160 40 70 100 40Z" stroke="#F7DA9F" stroke-width="1" fill="none"/><ellipse cx="100" cy="140" rx="35" ry="50" stroke="#FC3829" stroke-width=".5" fill="none"/></svg>
           <div class="pcard-cover-inner">
             <span class="pcard-cover-sym">&#10022;</span>
             <span class="pcard-cover-ttl">Ervas Sagradas<br>do Brasil</span>
           </div>
-          <span class="pcard-badge">Novo</span>
+          <span class="pcard-badge" style="background:rgba(247,218,159,.15);color:#F7DA9F;border:1px solid rgba(247,218,159,.3);">Em Breve</span>
         </div>
         <div class="pcard-body">
           <p class="pcard-type">Guia</p>
           <h3 class="pcard-name">100 Ervas Sagradas: Guia de Fitoterapia Umbandista</h3>
-          <div class="pcard-price">R$ 67 <s>R$ 127</s></div>
-          <button class="pcard-btn">Adquirir Agora</button>
+          <div class="pcard-price" style="color:rgba(247,218,159,.4);font-size:.9rem;">Em breve...</div>
+          <button class="pcard-btn" style="background:transparent;border:1px solid rgba(247,218,159,.3);color:#F7DA9F;" onclick="location.href='em-breve.html'">🔔 Quero ser avisado</button>
         </div>
       </div>
 
       <!-- Card 4 -->
-      <div class="pcard reveal">
+      <div class="pcard reveal" style="opacity:.85;">
         <div class="pcard-cover" style="background:linear-gradient(160deg,#18082a,#3a1060);">
           <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.12" viewBox="0 0 200 270"><circle cx="100" cy="135" r="70" stroke="#F7DA9F" stroke-width="1" fill="none"/><path d="M100 65 L118 120 L178 120 L130 155 L148 210 L100 175 L52 210 L70 155 L22 120 L82 120 Z" stroke="#FC3829" stroke-width=".5" fill="none"/></svg>
           <div class="pcard-cover-inner">
             <span class="pcard-cover-sym">&#9651;</span>
             <span class="pcard-cover-ttl">Curso Completo<br>de Umbanda</span>
           </div>
-          <span class="pcard-badge">Premium</span>
+          <span class="pcard-badge" style="background:rgba(247,218,159,.15);color:#F7DA9F;border:1px solid rgba(247,218,159,.3);">Em Breve</span>
         </div>
         <div class="pcard-body">
           <p class="pcard-type">Curso Online</p>
           <h3 class="pcard-name">Umbanda do Zero: Curso Completo para Iniciantes</h3>
-          <div class="pcard-price">R$ 197 <s>R$ 397</s></div>
-          <button class="pcard-btn">Adquirir Agora</button>
+          <div class="pcard-price" style="color:rgba(247,218,159,.4);font-size:.9rem;">Em breve...</div>
+          <button class="pcard-btn" style="background:transparent;border:1px solid rgba(247,218,159,.3);color:#F7DA9F;" onclick="location.href='em-breve.html'">🔔 Quero ser avisado</button>
         </div>
       </div>
 
