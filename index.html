@@ -613,6 +613,19 @@ footer{
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
 .reveal.in{opacity:1;transform:translateY(0);}
 
+/* ── TESTIMONIALS ── */
+#depoimentos{padding:6rem 2rem;text-align:center;}
+.section-label{font-family:'League Spartan',sans-serif;font-size:.66rem;letter-spacing:.32em;color:var(--red);display:block;margin-bottom:.8rem;text-transform:uppercase;}
+.section-title{font-size:clamp(2rem,5vw,3.5rem);color:var(--cream);line-height:.95;margin-bottom:1rem;font-family:'League Spartan',sans-serif;text-transform:uppercase;letter-spacing:.04em;}
+.section-title span{color:var(--red);}
+.section-subtitle{font-size:1.05rem;font-style:italic;color:var(--cream-dim);max-width:580px;margin:0 auto;line-height:1.8;}
+.testimonials-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;max-width:900px;margin:3rem auto 0;}
+.testimonial-card{background:var(--dark);border:1px solid rgba(61,99,68,.18);border-radius:8px;padding:2rem;display:flex;flex-direction:column;gap:1rem;}
+.testimonial-symbol{font-size:1.2rem;color:var(--cream);}
+.testimonial-quote{font-style:italic;line-height:1.7;color:var(--cream-dim);}
+.testimonial-author{font-weight:600;color:var(--cream);font-family:'League Spartan',sans-serif;}
+.testimonial-product{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;opacity:.6;color:var(--cream-faint);}
+
 /* ── RESPONSIVE ── */
 @media(max-width:1024px){
   .blog-grid{grid-template-columns:repeat(2,1fr);}
@@ -634,6 +647,7 @@ footer{
   .foot-links-wrap{grid-template-columns:1fr 1fr;}
   .foot-bottom{flex-direction:column;text-align:center;gap:.5rem;}
   .hero-btns{flex-direction:column;align-items:center;}
+  .testimonials-grid{grid-template-columns:1fr;}
 }
 @media(max-width:480px){
   .prod-grid{grid-template-columns:1fr;}
@@ -663,7 +677,6 @@ footer{
         <li class="slide-tab"><a href="loja.html">Loja</a></li>
         <li class="slide-cursor" id="slideCursor" aria-hidden="true"></li>
       </ul>
-      <a href="#newsletter" class="nav-cta-btn">Entrar</a>
     </div>
 
     <!-- Mobile: MenuToggleIcon (animates hamburger → X on open) -->
@@ -688,7 +701,6 @@ footer{
         <a href="loja.html">Loja</a>
       </div>
       <div class="mobile-ctas">
-        <a href="#newsletter" class="mobile-cta-outline">Entrar</a>
         <a href="#terreiro" class="mobile-cta-primary">Acessar o Terreiro</a>
       </div>
     </div>
@@ -1038,6 +1050,49 @@ footer{
     <div style="text-align:center;margin-top:3rem;">
       <a href="loja.html" class="btn btn-secondary">Ver Toda a Loja</a>
     </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <p class="section-label">◆ Comunidade</p>
+  <h2 class="section-title">VOZES DO <span>TERREIRO</span></h2>
+  <p class="section-subtitle">O que dizem os que já cruzaram a encruzilhada</p>
+
+  <div class="testimonials-grid">
+
+    <!-- PLACEHOLDER: replace with real testimonial -->
+    <div class="testimonial-card">
+      <span class="testimonial-symbol">✦</span>
+      <p class="testimonial-quote">"Eu tinha interesse na Umbanda mas não sabia por onde começar — tinha medo de não respeitar a tradição. O e-book me deu um caminho dia a dia, sem julgamento. Me senti acolhida pela primeira vez."</p>
+      <p class="testimonial-author">Mariana S., São Paulo</p>
+      <p class="testimonial-product">Ancestralidade na Prática</p>
+    </div>
+
+    <!-- PLACEHOLDER: replace with real testimonial -->
+    <div class="testimonial-card">
+      <span class="testimonial-symbol">✦</span>
+      <p class="testimonial-quote">"Minha família é evangélica. Eu carregava a chamada dos Orixás há anos mas tinha vergonha de aprofundar. Aqui encontrei um espaço que explica com respeito e sem sensacionalismo. Hoje pratico com consciência."</p>
+      <p class="testimonial-author">Thiago R., Belo Horizonte</p>
+      <p class="testimonial-product">Blog do Saber</p>
+    </div>
+
+    <!-- PLACEHOLDER: replace with real testimonial -->
+    <div class="testimonial-card">
+      <span class="testimonial-symbol">✦</span>
+      <p class="testimonial-quote">"Pratico há 5 anos mas nunca tive um fundamento sólido sobre ervas e rituais. O conteúdo aqui tem profundidade real e respeita a tradição de verdade. Virou minha referência."</p>
+      <p class="testimonial-author">Carla D., Recife</p>
+      <p class="testimonial-product">Comunidade</p>
+    </div>
+
+    <!-- PLACEHOLDER: replace with real testimonial -->
+    <div class="testimonial-card">
+      <span class="testimonial-symbol">✦</span>
+      <p class="testimonial-quote">"Comprei o e-book sem muita expectativa. Me surpreendi — são 60 dias de prática que constroem um hábito espiritual de verdade. Estou no dia 34 e sinto diferença concreta na minha conexão com os guias."</p>
+      <p class="testimonial-author">Felipe M., Curitiba</p>
+      <p class="testimonial-product">Ancestralidade na Prática</p>
+    </div>
+
   </div>
 </section>
 
