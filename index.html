@@ -511,42 +511,103 @@ section{padding:7rem 2rem;position:relative;}
 .nl-input::placeholder{color:var(--cream-faint);font-style:italic;}
 
 /* ── FOOTER ── */
-footer{background:#040404;padding:4.5rem 2rem 2rem;border-top:1px solid rgba(61,99,68,.25);}
+/* ── FOOTER ── */
+footer{
+  background:linear-gradient(180deg,#030303 0%,#060606 100%);
+  position:relative;
+}
 
-.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;max-width:1200px;margin:0 auto 3rem;}
+.foot-ornament{
+  display:flex;align-items:center;
+  padding:0 2rem;max-width:1200px;margin:0 auto;
+}
+.foot-orn-line{flex:1;height:1px;}
+.foot-orn-line.l{background:linear-gradient(90deg,transparent,rgba(61,99,68,.4));}
+.foot-orn-line.r{background:linear-gradient(90deg,rgba(61,99,68,.4),transparent);}
+.foot-orn-sym{margin:0 1.5rem;flex-shrink:0;display:block;}
+
+.foot-inner{
+  display:grid;grid-template-columns:1.6fr 2fr;
+  gap:5rem;max-width:1200px;margin:0 auto;
+  padding:3.5rem 2rem 3rem;
+}
+
+.foot-brand{display:flex;flex-direction:column;}
 .foot-brand img{
-  width:80px;height:80px;border-radius:50%;
-  margin-bottom:1rem;
-  border:1px solid rgba(61,99,68,.4);
-  filter:drop-shadow(0 0 16px rgba(252,56,41,.2));
+  width:68px;height:68px;border-radius:50%;
+  border:1px solid rgba(252,56,41,.3);
+  box-shadow:0 0 24px rgba(252,56,41,.15),0 0 60px rgba(0,0,0,.6);
+  margin-bottom:1.1rem;
 }
-.foot-brand-name{font-family:'League Spartan',sans-serif;font-size:1rem;letter-spacing:.12em;color:var(--cream);}
-.foot-brand-sub{font-family:'League Spartan',sans-serif;font-size:.62rem;letter-spacing:.24em;color:var(--red);margin-bottom:1rem;}
-.foot-brand p{font-size:.88rem;color:var(--cream-faint);line-height:1.72;margin-bottom:1.5rem;}
+.foot-brand-name{
+  font-family:'League Spartan',sans-serif;font-size:1rem;
+  letter-spacing:.14em;color:var(--cream);line-height:1;
+}
+.foot-brand-sub{
+  font-family:'League Spartan',sans-serif;font-size:.6rem;
+  letter-spacing:.28em;color:var(--red);
+  text-transform:uppercase;margin-bottom:1.1rem;
+}
+.foot-brand-desc{
+  font-size:.88rem;color:var(--cream-faint);
+  line-height:1.78;font-style:italic;
+  margin-bottom:1.8rem;max-width:300px;
+}
 
-.socials{display:flex;gap:.6rem;}
+.socials{display:flex;gap:.65rem;flex-wrap:wrap;}
 .soc{
-  width:34px;height:34px;border:1px solid rgba(61,99,68,.35);
+  width:38px;height:38px;border-radius:50%;
+  border:1px solid rgba(247,218,159,.13);
   display:flex;align-items:center;justify-content:center;
-  color:var(--cream-dim);text-decoration:none;transition:all .3s;
+  color:rgba(247,218,159,.4);text-decoration:none;
+  background:rgba(255,255,255,.02);
+  transition:all .3s;
 }
-.soc:hover{border-color:var(--red);color:var(--red);background:rgba(252,56,41,.08);}
+.soc:hover{
+  border-color:var(--red);color:var(--red);
+  background:rgba(252,56,41,.08);
+  transform:translateY(-2px);
+  box-shadow:0 4px 14px rgba(252,56,41,.18);
+}
 
+.foot-links-wrap{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:2rem;padding-top:.25rem;
+}
 .foot-col h4{
-  font-size:.7rem;letter-spacing:.22em;color:var(--cream);
-  margin-bottom:1.4rem;padding-bottom:.7rem;
-  border-bottom:1px solid rgba(61,99,68,.25);
+  font-family:'League Spartan',sans-serif;
+  font-size:.63rem;letter-spacing:.28em;
+  color:var(--cream);text-transform:uppercase;
+  margin-bottom:1.3rem;padding-bottom:.7rem;
+  border-bottom:1px solid rgba(252,56,41,.22);
 }
 .foot-links{list-style:none;display:flex;flex-direction:column;gap:.7rem;}
-.foot-links a{color:var(--cream-faint);text-decoration:none;font-size:.9rem;font-style:italic;transition:color .3s;}
-.foot-links a:hover{color:var(--red);}
+.foot-links a{
+  color:var(--cream-faint);text-decoration:none;
+  font-size:.88rem;font-style:italic;
+  display:flex;align-items:center;gap:.5rem;
+  transition:color .25s,padding-left .2s;
+}
+.foot-links a::before{
+  content:'◆';font-size:.38rem;
+  color:rgba(252,56,41,.28);flex-shrink:0;
+  transition:color .25s;
+}
+.foot-links a:hover{color:var(--cream);padding-left:3px;}
+.foot-links a:hover::before{color:var(--red);}
 
 .foot-bottom{
-  max-width:1200px;margin:0 auto;padding-top:2rem;
-  border-top:1px solid rgba(61,99,68,.18);
-  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;
+  max-width:1200px;margin:0 auto;
+  padding:1.4rem 2rem;
+  border-top:1px solid rgba(61,99,68,.15);
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
 }
-.foot-bottom p{font-size:.75rem;color:var(--cream-faint);font-family:'League Spartan',sans-serif;letter-spacing:.06em;}
+.foot-bottom p{
+  font-size:.68rem;color:rgba(247,218,159,.22);
+  font-family:'League Spartan',sans-serif;letter-spacing:.08em;text-transform:uppercase;
+}
+.foot-bottom-sym{color:rgba(252,56,41,.35);font-size:.65rem;}
 
 /* ── ANIMATIONS ── */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
@@ -556,7 +617,8 @@ footer{background:#040404;padding:4.5rem 2rem 2rem;border-top:1px solid rgba(61,
 @media(max-width:1024px){
   .blog-grid{grid-template-columns:repeat(2,1fr);}
   .prod-grid{grid-template-columns:repeat(2,1fr);}
-  .foot-grid{grid-template-columns:1fr 1fr;}
+  .foot-inner{grid-template-columns:1fr;gap:2.5rem;}
+  .foot-links-wrap{grid-template-columns:repeat(3,1fr);}
 }
 @media(max-width:768px){
   nav{padding:.9rem 1.2rem;}
@@ -569,8 +631,8 @@ footer{background:#040404;padding:4.5rem 2rem 2rem;border-top:1px solid rgba(61,
   .com-feats{grid-template-columns:1fr;}
   .prod-grid{grid-template-columns:1fr 1fr;}
   .nl-grid{grid-template-columns:1fr;}
-  .foot-grid{grid-template-columns:1fr;}
-  .foot-bottom{flex-direction:column;text-align:center;}
+  .foot-links-wrap{grid-template-columns:1fr 1fr;}
+  .foot-bottom{flex-direction:column;text-align:center;gap:.5rem;}
   .hero-btns{flex-direction:column;align-items:center;}
 }
 @media(max-width:480px){
@@ -1001,12 +1063,28 @@ footer{background:#040404;padding:4.5rem 2rem 2rem;border-top:1px solid rgba(61,
 
 <!-- FOOTER -->
 <footer>
-  <div class="foot-grid">
+
+  <!-- Top ornament -->
+  <div class="foot-ornament">
+    <div class="foot-orn-line l"></div>
+    <svg class="foot-orn-sym" width="52" height="52" viewBox="0 0 52 52" fill="none">
+      <circle cx="26" cy="26" r="25" stroke="rgba(61,99,68,0.35)" stroke-width="1"/>
+      <path d="M26 6 L26 46 M6 26 L46 26" stroke="rgba(252,56,41,0.35)" stroke-width="1"/>
+      <path d="M26 14 L38 26 L26 38 L14 26 Z" stroke="rgba(247,218,159,0.18)" stroke-width="1" fill="none"/>
+      <circle cx="26" cy="26" r="3.5" fill="rgba(252,56,41,0.55)"/>
+    </svg>
+    <div class="foot-orn-line r"></div>
+  </div>
+
+  <!-- Main grid -->
+  <div class="foot-inner">
+
+    <!-- Brand column -->
     <div class="foot-brand">
-      <img src="logo encruzilhadas main.png" alt="Logo">
+      <img src="logo encruzilhadas main.png" alt="Logo Encruzilhadas do Saber">
       <p class="foot-brand-name">Encruzilhadas</p>
       <p class="foot-brand-sub">do Saber</p>
-      <p>Um espaço dedicado à preservação, ensino e celebração da espiritualidade afro-brasileira com amor, respeito e axé.</p>
+      <p class="foot-brand-desc">Um espaço dedicado à preservação, ensino e celebração da espiritualidade afro-brasileira com amor, respeito e axé.</p>
       <div class="socials">
         <a href="https://www.instagram.com/encruzilhadas.dosaber/" target="_blank" rel="noopener noreferrer" class="soc" aria-label="Instagram">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
@@ -1026,43 +1104,48 @@ footer{background:#040404;padding:4.5rem 2rem 2rem;border-top:1px solid rgba(61,
       </div>
     </div>
 
-    <div class="foot-col">
-      <h4>Navegue</h4>
-      <ul class="foot-links">
-        <li><a href="#terreiro">Terreiro Online</a></li>
-        <li><a href="blog.html">Blog do Saber</a></li>
-        <li><a href="#comunidade">Comunidade</a></li>
-        <li><a href="loja.html">Loja</a></li>
-        <li><a href="#">Sobre Nós</a></li>
-      </ul>
+    <!-- Link columns -->
+    <div class="foot-links-wrap">
+      <div class="foot-col">
+        <h4>Navegue</h4>
+        <ul class="foot-links">
+          <li><a href="#terreiro">Terreiro Online</a></li>
+          <li><a href="blog.html">Blog do Saber</a></li>
+          <li><a href="terapias.html">Terapias</a></li>
+          <li><a href="#comunidade">Comunidade</a></li>
+          <li><a href="loja.html">Loja</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Aprenda</h4>
+        <ul class="foot-links">
+          <li><a href="#">Os Orixás</a></li>
+          <li><a href="#">As Entidades</a></li>
+          <li><a href="#">Rituais</a></li>
+          <li><a href="#">Ervas Sagradas</a></li>
+          <li><a href="#">Pontos Cantados</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Ajuda</h4>
+        <ul class="foot-links">
+          <li><a href="#">Fale Conosco</a></li>
+          <li><a href="#">Perguntas Frequentes</a></li>
+          <li><a href="EncruzilhadasdoSaber_PrivacyPolicy_v1.html">Política de Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+        </ul>
+      </div>
     </div>
 
-    <div class="foot-col">
-      <h4>Aprenda</h4>
-      <ul class="foot-links">
-        <li><a href="#">Os Orixás</a></li>
-        <li><a href="#">As Entidades</a></li>
-        <li><a href="#">Rituais</a></li>
-        <li><a href="#">Ervas Sagradas</a></li>
-        <li><a href="#">Pontos Cantados</a></li>
-      </ul>
-    </div>
-
-    <div class="foot-col">
-      <h4>Ajuda</h4>
-      <ul class="foot-links">
-        <li><a href="#">Fale Conosco</a></li>
-        <li><a href="#">Perguntas Frequentes</a></li>
-        <li><a href="EncruzilhadasdoSaber_PrivacyPolicy_v1.html">Política de Privacidade</a></li>
-        <li><a href="#">Termos de Uso</a></li>
-      </ul>
-    </div>
   </div>
 
+  <!-- Bottom bar -->
   <div class="foot-bottom">
     <p>&copy; 2026 Encruzilhadas do Saber. Todos os direitos reservados.</p>
-    <p>Feito com &#9670; Axé e Amor</p>
+    <span class="foot-bottom-sym">&#9670;</span>
+    <p>Feito com Axé e Amor</p>
   </div>
+
 </footer>
 
 <script>
